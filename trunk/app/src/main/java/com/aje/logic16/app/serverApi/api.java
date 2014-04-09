@@ -1,5 +1,7 @@
 package com.aje.logic16.app.serverApi;
 
+import com.aje.logic16.app.HighScoreLogic.highScore;
+
 import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;
 import org.apache.http.NameValuePair;
@@ -125,6 +127,32 @@ public class api {
             return response.response;
         }
         else return Integer.toString(res);
+    }
+
+    public highScore getHighScore(int pos) throws IllegalArgumentException
+    {
+        String name = "";
+        int score = 0;
+
+        String response = this.getScore(pos);
+        if (response.charAt(0) == '#')
+        {
+            response = response.substring(1);
+
+            String[] responseSplit = response.split("#");
+
+            System.out.println("HighscoreResult : " +
+                    responseSplit[0] + " 1 " + responseSplit[1]);
+
+            if (responseSplit[0].length() > 0 || responseSplit[1].length() > 1)
+                throw new IllegalArgumentException();
+
+            name = responseSplit[0];
+            score = Integer.getInteger(responseSplit[1]);
+        }
+        else throw new IllegalArgumentException();
+
+        return new highScore(name,score);
     }
 }
 
