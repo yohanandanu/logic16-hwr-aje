@@ -161,4 +161,8 @@ public class StartPage extends Activity {
     public void startGame(View view) {
         setContentView(R.layout.activity_game_screen);
     }
+
+    public void show_highscore(View view) {
+        setContentView(R.layout.highscore_list);
+    }
 }
