@@ -7,12 +7,15 @@ import org.apache.http.StatusLine;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.protocol.HTTP;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
@@ -38,7 +41,39 @@ public class api {
 
     private int get(String url, ApiResponse out){
 
-        out.response = "";
+        HttpGet request = new HttpGet(url);
+        request.addHeader("User-Agent", HTTP.USER_AGENT);
+
+        try {
+            HttpResponse response = httpClient.execute(request);
+
+            System.out.println("\nSending 'GET' request to URL : " + url);
+            System.out.println("Response Code : " +
+                    response.getStatusLine().getStatusCode());
+
+            BufferedReader rd = new BufferedReader(
+                    new InputStreamReader(response.getEntity().getContent()));
+
+            StringBuffer result = new StringBuffer();
+            String line = "";
+            while ((line = rd.readLine()) != null) {
+                result.append(line);
+            }
+            if(response.getStatusLine().getStatusCode()== HttpStatus.SC_OK)
+            {
+                System.out.println("Response : " +
+                        result.toString());
+                out.response = result.toString();
+                return 1;
+            }
+            else
+               return response.getStatusLine().getStatusCode();
+
+        } catch (ClientProtocolException e) {
+        // TODO Auto-generated catch block
+        } catch (IOException e) {
+        // TODO Auto-generated catch block
+        }
         return 0;
     }
 
@@ -70,8 +105,26 @@ public class api {
         return post(postURL,nameValuePairs);
     }
     private String getForm(){
+        ApiResponse<String> response = new ApiResponse("");
 
-        return "";
+        int res = get(getFormURL,response);
+        if (res == 1)
+        {
+            return response.response;
+        }
+        else return Integer.toString(res);
+    }
+
+    private String getScore(int pos){
+        ApiResponse<String> response = new ApiResponse("");
+
+        String highScoreUrl = getHighScoreURL + Integer.toString(pos);
+        int res = get(highScoreUrl,response);
+        if (res == 1)
+        {
+            return response.response;
+        }
+        else return Integer.toString(res);
     }
 }
 
