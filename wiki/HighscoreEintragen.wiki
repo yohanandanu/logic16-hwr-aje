@@ -1,6 +1,6 @@
 = Highscore eintragen =
 
-[StartScreen Highscore nicht eintragen Button]
-[StartScreen Highscore eintragen Button]
+[Startscreen Highscore nicht eintragen Button]
+[Startscreen Highscore eintragen Button]
 
 http://cdn.imghack.se/images/d8a202b49b8f31c23da8644badcc7420.jpg
