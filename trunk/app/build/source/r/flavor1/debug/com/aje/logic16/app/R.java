@@ -745,11 +745,14 @@ containing a value of this type.
         public static final int abc_split_action_bar_is_narrow=0x7f050005;
     }
     public static final class color {
-        public static final int abc_search_url_text_holo=0x7f060004;
+        public static final int abc_search_url_text_holo=0x7f060007;
         public static final int abc_search_url_text_normal=0x7f060000;
         public static final int abc_search_url_text_pressed=0x7f060001;
         public static final int abc_search_url_text_selected=0x7f060002;
-        public static final int black_overlay=0x7f060003;
+        public static final int backgroundBlue=0x7f060003;
+        public static final int black_overlay=0x7f060004;
+        public static final int green=0x7f060005;
+        public static final int red=0x7f060006;
     }
     public static final class dimen {
         public static final int abc_action_bar_default_height=0x7f080000;
@@ -859,6 +862,7 @@ containing a value of this type.
         public static final int abc_textfield_searchview_right_holo_dark=0x7f020055;
         public static final int abc_textfield_searchview_right_holo_light=0x7f020056;
         public static final int ic_launcher=0x7f020057;
+        public static final int rounded_corner=0x7f020058;
     }
     public static final class id {
         public static final int action_bar=0x7f07001c;
@@ -873,27 +877,30 @@ containing a value of this type.
         public static final int action_menu_presenter=0x7f070016;
         public static final int action_mode_close_button=0x7f070024;
         public static final int activity_chooser_view_content=0x7f070025;
+        public static final int addHighscoreButton=0x7f070045;
         public static final int always=0x7f07000f;
         public static final int beginning=0x7f07000a;
-        public static final int button=0x7f07003d;
         public static final int checkbox=0x7f07002d;
         public static final int collapseActionView=0x7f070011;
         public static final int default_activity_button=0x7f070028;
         public static final int dialog=0x7f070012;
         public static final int disableHome=0x7f070008;
         public static final int dropdown=0x7f070013;
+        public static final int editText=0x7f070044;
         public static final int edit_query=0x7f070030;
         public static final int end=0x7f07000c;
         public static final int expand_activities_button=0x7f070026;
         public static final int expanded_menu=0x7f07002c;
-        public static final int fullscreen_content=0x7f07003c;
+        public static final int fullscreen_content=0x7f07003d;
         public static final int fullscreen_content_controls=0x7f07003e;
+        public static final int gameOverText=0x7f070042;
+        public static final int gameScreenActivity=0x7f07003c;
+        public static final int highscoreListView=0x7f070047;
         public static final int home=0x7f070017;
         public static final int homeAsUp=0x7f070005;
         public static final int icon=0x7f07002a;
         public static final int ifRoom=0x7f07000e;
         public static final int image=0x7f070027;
-        public static final int imageButton=0x7f070041;
         public static final int listMode=0x7f070001;
         public static final int list_item=0x7f070029;
         public static final int middle=0x7f07000b;
@@ -922,12 +929,14 @@ containing a value of this type.
         public static final int start_game_button=0x7f07003f;
         public static final int submit_area=0x7f070039;
         public static final int tabMode=0x7f070002;
-        public static final int tableRow16=0x7f070042;
+        public static final int textView=0x7f070041;
         public static final int title=0x7f07002b;
         public static final int top_action_bar=0x7f070020;
+        public static final int tryAgainButton=0x7f070046;
         public static final int up=0x7f070021;
         public static final int useLogo=0x7f070003;
         public static final int withText=0x7f070010;
+        public static final int yourScore=0x7f070043;
     }
     public static final class integer {
         public static final int abc_max_action_buttons=0x7f090000;
@@ -958,9 +967,9 @@ containing a value of this type.
         public static final int abc_search_view=0x7f030016;
         public static final int activity_game_screen=0x7f030017;
         public static final int activity_start_page=0x7f030018;
-        public static final int image_button_rectangle=0x7f030019;
-        public static final int support_simple_spinner_dropdown_item=0x7f03001a;
-        public static final int table_row_line=0x7f03001b;
+        public static final int add_highscore=0x7f030019;
+        public static final int highscore_list=0x7f03001a;
+        public static final int support_simple_spinner_dropdown_item=0x7f03001b;
     }
     public static final class string {
         public static final int abc_action_bar_home_description=0x7f0a0000;
@@ -976,13 +985,17 @@ containing a value of this type.
         public static final int abc_searchview_description_voice=0x7f0a000a;
         public static final int abc_shareactionprovider_share_with=0x7f0a000b;
         public static final int abc_shareactionprovider_share_with_application=0x7f0a000c;
-        public static final int app_name=0x7f0a000d;
-        public static final int dummy_button=0x7f0a000e;
-        public static final int dummy_content=0x7f0a000f;
-        public static final int show_highscore=0x7f0a0010;
-        public static final int start_game=0x7f0a0011;
-        public static final int title_activity_game_screen=0x7f0a0012;
-        public static final int welcome_text=0x7f0a0013;
+        public static final int add_highscore=0x7f0a000d;
+        public static final int app_name=0x7f0a000e;
+        public static final int dummy_button=0x7f0a000f;
+        public static final int dummy_content=0x7f0a0010;
+        public static final int game_over=0x7f0a0011;
+        public static final int show_highscore=0x7f0a0012;
+        public static final int start_game=0x7f0a0013;
+        public static final int title_activity_game_screen=0x7f0a0014;
+        public static final int try_again=0x7f0a0015;
+        public static final int welcome_text=0x7f0a0016;
+        public static final int your_score=0x7f0a0017;
     }
     public static final class style {
         /**  Customize your theme here. 
@@ -990,7 +1003,7 @@ containing a value of this type.
         public static final int AppTheme=0x7f0b0000;
         public static final int ButtonBar=0x7f0b0001;
         public static final int ButtonBarButton=0x7f0b0002;
-        public static final int FullscreenActionBarStyle=0x7f0b0087;
+        public static final int FullscreenActionBarStyle=0x7f0b0089;
         public static final int FullscreenTheme=0x7f0b0003;
         public static final int TextAppearance_AppCompat_Base_CompactMenu_Dialog=0x7f0b0004;
         public static final int TextAppearance_AppCompat_Base_SearchResult=0x7f0b0005;
@@ -1123,6 +1136,8 @@ containing a value of this type.
         public static final int Widget_AppCompat_ProgressBar=0x7f0b0084;
         public static final int Widget_AppCompat_ProgressBar_Horizontal=0x7f0b0085;
         public static final int Widget_AppCompat_Spinner_DropDown_ActionBar=0x7f0b0086;
+        public static final int rectangleImageView=0x7f0b0087;
+        public static final int roundImageView=0x7f0b0088;
     }
     public static final class styleable {
         /** Attributes that can be used with a ActionBar.

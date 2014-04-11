@@ -81,7 +81,10 @@
     <!-- From: file:/C:/Users/Engin/AndroidStudioProjects/Logic16/app/src/main/res/values/colors.xml -->
     <eat-comment />
 
+    <color name="backgroundBlue">#F40099CC</color>
     <color name="black_overlay">#66000000</color>
+    <color name="green">#FF7cfc00</color>
+    <color name="red">#ffff0000</color>
     <!-- From: file:/C:/Users/Engin/AndroidStudioProjects/Logic16/app/build/exploded-bundles/ComAndroidSupportAppcompatV71901.aar/res/values/values.xml -->
     <eat-comment />
 
@@ -524,13 +527,17 @@
     <!-- From: file:/C:/Users/Engin/AndroidStudioProjects/Logic16/app/src/main/res/values/strings.xml -->
     <eat-comment />
 
+    <string name="add_highscore">Add Highscore</string>
     <string name="app_name">Logic16</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="game_over">Game Over!</string>
     <string name="show_highscore">Highscorelist</string>
     <string name="start_game">Start Game</string>
     <string name="title_activity_game_screen">GameScreen</string>
+    <string name="try_again">Try Again</string>
     <string name="welcome_text">Welcome to Logic16</string>
+    <string name="your_score">Your Score is :</string>
     <!-- From: file:/C:/Users/Engin/AndroidStudioProjects/Logic16/app/src/main/res/values/styles.xml -->
     <eat-comment />
 
@@ -1223,5 +1230,14 @@
     <style name="Widget.AppCompat.ProgressBar.Horizontal" parent="Widget.AppCompat.Base.ProgressBar.Horizontal" />
 
     <style name="Widget.AppCompat.Spinner.DropDown.ActionBar" parent="Widget.AppCompat.Base.Spinner" />
+    <!-- From: file:/C:/Users/Engin/AndroidStudioProjects/Logic16/app/src/main/res/values/styles.xml -->
+    <eat-comment />
+
+    <style name="rectangleImageView">
+        <item name="android:padding">2dp</item>
+        <item name="android:layout_margin">2dp</item>
+    </style>
+
+    <style name="roundImageView"></style>
 
 </resources>
