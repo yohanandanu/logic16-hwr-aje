@@ -19,10 +19,14 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".GameScreen"
+            android:name="com.aje.logic16.app.GameScreen"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_game_screen"
             android:theme="@style/FullscreenTheme" >
+        </activity>
+        <activity
+            android:name="com.aje.logic16.app.HighScoreActivity"
+            android:label="@string/title_activity_high_score" >
         </activity>
     </application>
 

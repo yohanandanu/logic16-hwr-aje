@@ -30,12 +30,6 @@
           <theme>@style/AppTheme</theme>
         </config>
       </layout>
-      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/image_button_rectangle.xml">
-        <config>
-          <device>Nexus 7 2013</device>
-          <theme>@style/AppTheme</theme>
-        </config>
-      </layout>
     </layouts>
   </component>
   <component name="AndroidLogFilters">
@@ -109,30 +103,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="activity_start_page.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_start_page.xml">
-          <provider selected="true" editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state line="42" column="41" selection-start="1877" selection-end="1877" vertical-scroll-proportion="0.0" vertical-offset="570" max-vertical-offset="1020">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="highscore_list.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/highscore_list.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="42" selection-start="355" selection-end="372" vertical-scroll-proportion="-6.12" vertical-offset="0" max-vertical-offset="272">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="add_highscore.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/add_highscore.xml">
           <provider selected="true" editor-type-id="android-designer">
@@ -151,7 +121,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="14" selection-start="86" selection-end="86" vertical-scroll-proportion="-0.68" vertical-offset="0" max-vertical-offset="578">
+            <state line="1" column="14" selection-start="86" selection-end="86" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="578">
               <folding />
             </state>
           </provider>
@@ -166,10 +136,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameScreen.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="GameScreen.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/aje/logic16/app/GameScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="59" selection-start="2377" selection-end="2377" vertical-scroll-proportion="-5.8962264" vertical-offset="2674" max-vertical-offset="4182">
+            <state line="112" column="40" selection-start="4601" selection-end="4601" vertical-scroll-proportion="0.0" vertical-offset="1275" max-vertical-offset="4182">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HighScoreActivity.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/aje/logic16/app/HighScoreActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="38" column="46" selection-start="1144" selection-end="1144" vertical-scroll-proportion="0.90625" vertical-offset="17" max-vertical-offset="765">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_high_score.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_high_score.xml">
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="0" selection-start="505" selection-end="505" vertical-scroll-proportion="-3.4" vertical-offset="0" max-vertical-offset="306">
               <folding />
             </state>
           </provider>
@@ -178,7 +169,7 @@
       <file leaf-file-name="rounded_corner.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/rounded_corner.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="29" selection-start="135" selection-end="135" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
+            <state line="3" column="29" selection-start="135" selection-end="135" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="374">
               <folding />
             </state>
           </provider>
@@ -187,7 +178,7 @@
       <file leaf-file-name="colors.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="36" selection-start="181" selection-end="181" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
+            <state line="5" column="36" selection-start="181" selection-end="181" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="238">
               <folding />
             </state>
           </provider>
@@ -196,7 +187,7 @@
       <file leaf-file-name="StartPage.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/aje/logic16/app/StartPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="168" column="27" selection-start="6285" selection-end="6285" vertical-scroll-proportion="0.0" vertical-offset="2266" max-vertical-offset="2635">
+            <state line="173" column="30" selection-start="6436" selection-end="6436" vertical-scroll-proportion="0.0" vertical-offset="2066" max-vertical-offset="2652">
               <folding />
             </state>
           </provider>
@@ -205,8 +196,13 @@
       <file leaf-file-name="highScore.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/aje/logic16/app/HighScoreLogic/highScore.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="25" selection-start="389" selection-end="389" vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="476">
-              <folding />
+            <state line="19" column="25" selection-start="389" selection-end="389" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
+              <folding>
+                <element signature="e#298#299#0" expanded="false" />
+                <element signature="e#331#332#0" expanded="false" />
+                <element signature="e#362#363#0" expanded="false" />
+                <element signature="e#394#395#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -922,7 +918,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/aje/logic16/app/HighScoreLogic/HighScoreList.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/add_highscore.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/aje/logic16/app/StartPage.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/image_button_rectangle.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_game_screen.xml" />
@@ -930,6 +925,9 @@
         <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/rounded_corner.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/aje/logic16/app/GameScreen.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_high_score.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/aje/logic16/app/StartPage.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/aje/logic16/app/HighScoreActivity.java" />
       </list>
     </option>
   </component>
@@ -964,6 +962,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1136,8 +1136,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1381,6 +1379,7 @@
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24962406" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32941177" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1391,7 +1390,6 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="true" internal_type="SLIDING" type="FLOATING" visible="false" weight="0.32932332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="110" y="100" width="1146" height="528" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1413,6 +1411,93 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_start_page.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state line="42" column="41" selection-start="1877" selection-end="1877" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/highscore_list.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="42" selection-start="355" selection-end="372" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="272">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/add_highscore.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state line="64" column="47" selection-start="2496" selection-end="2496" vertical-scroll-proportion="0.0" vertical-offset="867" max-vertical-offset="1309">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_game_screen.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="14" selection-start="86" selection-end="86" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="578">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="46" selection-start="1026" selection-end="1026" vertical-scroll-proportion="0.0" vertical-offset="349" max-vertical-offset="680">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/aje/logic16/app/GameScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="75" column="59" selection-start="2377" selection-end="2377" vertical-scroll-proportion="0.0" vertical-offset="1275" max-vertical-offset="4182">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/rounded_corner.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="29" selection-start="135" selection-end="135" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="374">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="36" selection-start="181" selection-end="181" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="238">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/aje/logic16/app/StartPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="168" column="27" selection-start="6285" selection-end="6285" vertical-scroll-proportion="0.0" vertical-offset="2856" max-vertical-offset="3077">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/aje/logic16/app/HighScoreLogic/highScore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="25" selection-start="389" selection-end="389" vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="476">
+          <folding>
+            <element signature="e#298#299#0" expanded="false" />
+            <element signature="e#331#332#0" expanded="false" />
+            <element signature="e#362#363#0" expanded="false" />
+            <element signature="e#394#395#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_start_page.xml">
       <provider selected="true" editor-type-id="android-designer">
         <state />
@@ -1469,9 +1554,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/aje/logic16/app/serverApi/api.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="150" column="57" selection-start="5351" selection-end="5351" vertical-scroll-proportion="0.0" vertical-offset="2550" max-vertical-offset="2907">
-          <folding />
-        </state>
+        <state line="150" column="57" selection-start="5351" selection-end="5351" vertical-scroll-proportion="0.0" vertical-offset="2550" max-vertical-offset="2907" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/aje/logic16/app/GameScreen.java">
@@ -1491,7 +1574,12 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/aje/logic16/app/HighScoreLogic/highScore.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="25" selection-start="389" selection-end="389" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
-          <folding />
+          <folding>
+            <element signature="e#298#299#0" expanded="false" />
+            <element signature="e#331#332#0" expanded="false" />
+            <element signature="e#362#363#0" expanded="false" />
+            <element signature="e#394#395#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1527,9 +1615,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/aje/logic16/app/serverApi/api.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="144" column="64" selection-start="5119" selection-end="5119" vertical-scroll-proportion="0.0" vertical-offset="2330" max-vertical-offset="2907">
-          <folding />
-        </state>
+        <state line="144" column="64" selection-start="5119" selection-end="5119" vertical-scroll-proportion="0.0" vertical-offset="2330" max-vertical-offset="2907" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/aje/logic16/app/StartPage.java">
@@ -1570,18 +1656,9 @@
         <state line="524" column="0" selection-start="18920" selection-end="18920" vertical-scroll-proportion="0.3323263" vertical-offset="8441" max-vertical-offset="10591" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/aje/logic16/app/HighScoreLogic/highScore.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="25" selection-start="389" selection-end="389" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/aje/logic16/app/serverApi/api.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="150" column="57" selection-start="5351" selection-end="5351" vertical-scroll-proportion="0.0" vertical-offset="1939" max-vertical-offset="2567">
-          <folding />
-        </state>
+        <state line="150" column="57" selection-start="5351" selection-end="5351" vertical-scroll-proportion="0.0" vertical-offset="1939" max-vertical-offset="2567" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
@@ -1596,7 +1673,7 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="42" selection-start="355" selection-end="372" vertical-scroll-proportion="-6.12" vertical-offset="0" max-vertical-offset="272">
+        <state line="9" column="42" selection-start="355" selection-end="372" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="272">
           <folding />
         </state>
       </provider>
@@ -1604,13 +1681,6 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/attrs.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="556">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/aje/logic16/app/StartPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="168" column="27" selection-start="6285" selection-end="6285" vertical-scroll-proportion="0.0" vertical-offset="2266" max-vertical-offset="2635">
           <folding />
         </state>
       </provider>
@@ -1661,14 +1731,50 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="14" selection-start="86" selection-end="86" vertical-scroll-proportion="-0.68" vertical-offset="0" max-vertical-offset="578">
+        <state line="1" column="14" selection-start="86" selection-end="86" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="578">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/aje/logic16/app/GameScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="59" selection-start="2377" selection-end="2377" vertical-scroll-proportion="-5.8962264" vertical-offset="2674" max-vertical-offset="4182">
+        <state line="112" column="40" selection-start="4601" selection-end="4601" vertical-scroll-proportion="0.0" vertical-offset="1275" max-vertical-offset="4182">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_high_score.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="0" selection-start="505" selection-end="505" vertical-scroll-proportion="-3.4" vertical-offset="0" max-vertical-offset="306">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/aje/logic16/app/StartPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="173" column="30" selection-start="6436" selection-end="6436" vertical-scroll-proportion="0.0" vertical-offset="2066" max-vertical-offset="2652">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/aje/logic16/app/HighScoreLogic/highScore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="25" selection-start="389" selection-end="389" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
+          <folding>
+            <element signature="e#298#299#0" expanded="false" />
+            <element signature="e#331#332#0" expanded="false" />
+            <element signature="e#362#363#0" expanded="false" />
+            <element signature="e#394#395#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/aje/logic16/app/HighScoreActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="46" selection-start="1144" selection-end="1144" vertical-scroll-proportion="0.90625" vertical-offset="17" max-vertical-offset="765">
           <folding />
         </state>
       </provider>
