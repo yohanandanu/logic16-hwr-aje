@@ -4,11 +4,18 @@ import com.aje.logic16.app.util.SystemUiHider;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
@@ -33,7 +40,7 @@ public class StartPage extends Activity {
      * If set, will toggle the system UI visibility upon interaction. Otherwise,
      * will show the system UI visibility upon interaction.
      */
-    private static final boolean TOGGLE_ON_CLICK = true;
+    private static final boolean TOGGLE_ON_CLICK = false;
 
     /**
      * The flags to pass to {@link SystemUiHider#getInstance}.
@@ -54,7 +61,6 @@ public class StartPage extends Activity {
         final View controlsView = findViewById(R.id.fullscreen_content_controls);
         final View contentView = findViewById(R.id.fullscreen_content);
 
-
         // Set up an instance of SystemUiHider to control the system UI for
         // this activity.
         mSystemUiHider = SystemUiHider.getInstance(this, contentView, HIDER_FLAGS);
@@ -73,16 +79,16 @@ public class StartPage extends Activity {
                             // (Honeycomb MR2 and later), use it to animate the
                             // in-layout UI controls at the bottom of the
                             // screen.
-                            if (mControlsHeight == 0) {
-                                mControlsHeight = controlsView.getHeight();
-                            }
-                            if (mShortAnimTime == 0) {
-                                mShortAnimTime = getResources().getInteger(
-                                        android.R.integer.config_shortAnimTime);
-                            }
-                            controlsView.animate()
-                                    .translationY(visible ? 0 : mControlsHeight)
-                                    .setDuration(mShortAnimTime);
+                           // if (mControlsHeight == 0) {
+                           //     mControlsHeight = controlsView.getHeight();
+                           // }
+                           // if (mShortAnimTime == 0) {
+                           //     mShortAnimTime = getResources().getInteger(
+                           //             android.R.integer.config_shortAnimTime);
+                            //}
+                           // controlsView.animate()
+                           //         .translationY(visible ? 0 : mControlsHeight)
+                           //         .setDuration(mShortAnimTime);
                         } else {
                             // If the ViewPropertyAnimator APIs aren't
                             // available, simply show or hide the in-layout UI
@@ -92,7 +98,7 @@ public class StartPage extends Activity {
 
                         if (visible && AUTO_HIDE) {
                             // Schedule a hide().
-                            delayedHide(AUTO_HIDE_DELAY_MILLIS);
+                           // delayedHide(AUTO_HIDE_DELAY_MILLIS);
                         }
                     }
                 });
@@ -159,7 +165,8 @@ public class StartPage extends Activity {
     }
 
     public void startGame(View view) {
-        setContentView(R.layout.activity_game_screen);
+        Intent intent = new Intent(this, GameScreen.class);
+       startActivity(intent);
     }
 
     public void show_highscore(View view) {

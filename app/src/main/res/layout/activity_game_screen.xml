@@ -1,9 +1,12 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
     android:background="#000"
-    tools:context="com.aje.logic16.app.GameScreen">
+    android:id="@+id/gameScreenActivity"
+    tools:context="com.aje.logic16.app.GameScreen"
+    android:foregroundGravity="center_vertical|center_horizontal">
 
     <!-- The primary full-screen view. This can be replaced with whatever view
          is needed to present your content, e.g. VideoView, SurfaceView,
@@ -17,46 +20,6 @@
         android:textSize="50sp"
         android:gravity="center"
         android:text="" />
-
-
-        <TableLayout
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:gravity="center_vertical|center_horizontal">
-
-            <include layout="@layout/table_row_line" />
-            <include layout="@layout/table_row_line" />
-            <include layout="@layout/table_row_line" />
-            <include layout="@layout/table_row_line" />
-            <include layout="@layout/table_row_line" />
-            <include layout="@layout/table_row_line" />
-            <include layout="@layout/table_row_line" />
-            <include layout="@layout/table_row_line" />
-            <include layout="@layout/table_row_line" />
-            <include layout="@layout/table_row_line" />
-            <include layout="@layout/table_row_line" />
-            <include layout="@layout/table_row_line" />
-            <include layout="@layout/table_row_line" />
-            <include layout="@layout/table_row_line" />
-            <include layout="@layout/table_row_line" />
-            <include layout="@layout/table_row_line" />
-
-            <TableRow
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:layout_gravity="bottom"
-                android:gravity="center_horizontal">
-
-        <Button
-            style="?android:attr/buttonStyleSmall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="+"
-            android:id="@+id/button"
-            android:layout_gravity="bottom" />
-            </TableRow>
-        </TableLayout>
-
 
 
     <!-- This FrameLayout insets its children based on system windows using

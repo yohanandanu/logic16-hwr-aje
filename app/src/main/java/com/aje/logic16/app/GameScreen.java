@@ -6,14 +6,27 @@ import android.annotation.TargetApi;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.ColorFilter;
+import android.graphics.LightingColorFilter;
+import android.graphics.PorterDuff;
+import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.DisplayMetrics;
+import android.view.ContextThemeWrapper;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -53,19 +66,111 @@ public class GameScreen extends Activity {
      */
     private SystemUiHider mSystemUiHider;
 
+    private DisplayMetrics mMetrics = new DisplayMetrics();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindowManager().getDefaultDisplay().getMetrics(mMetrics);
 
-        setContentView(R.layout.activity_game_screen);
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 
-        final View controlsView = findViewById(R.id.fullscreen_content_controls);
-        final View contentView = findViewById(R.id.fullscreen_content);
+        LayoutInflater inflater = (LayoutInflater)this.getSystemService
+                (Context.LAYOUT_INFLATER_SERVICE);
+        ViewGroup gameScreen = (ViewGroup) inflater.inflate(R.layout.activity_game_screen,null);
+
+        LinearLayout.LayoutParams LLVParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
+        LinearLayout.LayoutParams LLHParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+
+        //LLVParams.topMargin = 5;
+        //LLVParams.rightMargin = 5;
+        final LinearLayout llVertical = new LinearLayout(this);
+        llVertical.setOrientation(LinearLayout.VERTICAL);
+        llVertical.setBackgroundColor(getResources().getColor(R.color.backgroundBlue));
+        llVertical.setGravity(Gravity.CENTER);
+        //llVertical.setWeightSum(6f);
+        llVertical.setLayoutParams(LLVParams);
+
+        int imageWidth = mMetrics.widthPixels / 14 ; // 8 images + 1 result image + some place (5)
+        int imageHeight = mMetrics.heightPixels / 22 ; // 16 imageRows, + change Button (1) + some place (5)
+        ContextThemeWrapper rectangleImageViewContext = new ContextThemeWrapper(this, R.style.rectangleImageView);
+
+        LinearLayout.LayoutParams imageLayoutParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT,LinearLayout.LayoutParams.WRAP_CONTENT);
+        imageLayoutParams.setMargins((int)Math.round(mMetrics.density*2),(int)Math.round(mMetrics.density*2),(int)Math.round(mMetrics.density*2),(int)Math.round(mMetrics.density*2));
+
+        for (int i=0; i<16 ;i++)
+        {
+            LinearLayout llHorizontal = new LinearLayout(this);
+            llHorizontal.setOrientation(LinearLayout.HORIZONTAL);
+            llHorizontal.setBackgroundColor(getResources().getColor(R.color.backgroundBlue));
+            llHorizontal.setLayoutParams(LLHParams);
+            llHorizontal.setGravity(Gravity.CENTER_HORIZONTAL);
+
+            for (int j=0;j<8;j++)
+            {
+                TextView image = new TextView(rectangleImageViewContext);
+                image.setMinimumWidth(imageWidth);
+                image.setMinimumHeight(imageHeight);
+                image.setLayoutParams(imageLayoutParams);
+                image.setBackgroundColor(Color.GREEN);
+                image.setText("+");
+                image.setGravity(Gravity.CENTER);
+                llHorizontal.addView(image);
+            }
+
+            TextView imageRes = new TextView(rectangleImageViewContext);
+            imageRes.setMinimumHeight(imageHeight);
+            imageRes.setMinimumWidth(imageWidth);
+            imageRes.setLayoutParams(imageLayoutParams);
+            Drawable round = getResources().getDrawable(R.drawable.rounded_corner);
+            //round.setColorFilter(Color.GREEN, PorterDuff.Mode.MULTIPLY);
+            //imageRes.setBackgroundColor(Color.GREEN);
+
+            ColorFilter filter = new LightingColorFilter( Color.GREEN, Color.GREEN );
+            round.setColorFilter(filter);
+            //imageRes.setImageResource(getResources().getColor(R.color.green));
+            //imageRes.setImageDrawable(round);
+            imageRes.setBackground(round);
+
+            llHorizontal.addView(imageRes);
+
+            llVertical.addView(llHorizontal);
+        }
+
+        //add Buttons
+
+        LinearLayout llHorizontal = new LinearLayout(this);
+        llHorizontal.setOrientation(LinearLayout.HORIZONTAL);
+        llHorizontal.setBackgroundColor(getResources().getColor(R.color.backgroundBlue));
+        llHorizontal.setLayoutParams(LLHParams);
+        llHorizontal.setGravity(Gravity.CENTER_HORIZONTAL);
+
+        for (int j=0;j<9;j++)
+        {
+
+            TextView image = new TextView(rectangleImageViewContext);
+            image.setMinimumWidth(imageWidth);
+            image.setMinimumHeight(imageHeight);
+            image.setLayoutParams(imageLayoutParams);
+            image.setBackgroundColor(Color.GREEN);
+            image.setText("+");
+            image.setGravity(Gravity.CENTER);
+            if (j==8) image.setVisibility(View.INVISIBLE);
+            llHorizontal.addView(image);
+        }
 
 
+
+        llVertical.addView(llHorizontal);
+
+        addContentView(llVertical,LLVParams);
+
+
+
+/*
         // Set up an instance of SystemUiHider to control the system UI for
         // this activity.
-        mSystemUiHider = SystemUiHider.getInstance(this, contentView, HIDER_FLAGS);
+        mSystemUiHider = SystemUiHider.getInstance(this, llVertical, HIDER_FLAGS);
         mSystemUiHider.setup();
         mSystemUiHider
                 .setOnVisibilityChangeListener(new SystemUiHider.OnVisibilityChangeListener() {
@@ -82,20 +187,20 @@ public class GameScreen extends Activity {
                             // in-layout UI controls at the bottom of the
                             // screen.
                             if (mControlsHeight == 0) {
-                                mControlsHeight = controlsView.getHeight();
+                                mControlsHeight = llVertical.getHeight();
                             }
                             if (mShortAnimTime == 0) {
                                 mShortAnimTime = getResources().getInteger(
                                         android.R.integer.config_shortAnimTime);
                             }
-                            controlsView.animate()
+                            llVertical.animate()
                                     .translationY(visible ? 0 : mControlsHeight)
                                     .setDuration(mShortAnimTime);
                         } else {
                             // If the ViewPropertyAnimator APIs aren't
                             // available, simply show or hide the in-layout UI
                             // controls.
-                            controlsView.setVisibility(visible ? View.VISIBLE : View.GONE);
+                            llVertical.setVisibility(visible ? View.VISIBLE : View.GONE);
                         }
 
                         if (visible && AUTO_HIDE) {
@@ -106,7 +211,7 @@ public class GameScreen extends Activity {
                 });
 
         // Set up the user interaction to manually show or hide the system UI.
-        contentView.setOnClickListener(new View.OnClickListener() {
+        llVertical.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (TOGGLE_ON_CLICK) {
@@ -116,7 +221,7 @@ public class GameScreen extends Activity {
                 }
             }
         });
-
+*/
         // Upon interacting with UI controls, delay any scheduled hide()
         // operations to prevent the jarring behavior of controls going away
         // while interacting with the UI.
@@ -130,7 +235,7 @@ public class GameScreen extends Activity {
         // Trigger the initial hide() shortly after the activity has been
         // created, to briefly hint to the user that UI controls
         // are available.
-        delayedHide(100);
+       // delayedHide(100);
     }
 
 
@@ -156,6 +261,9 @@ public class GameScreen extends Activity {
             mSystemUiHider.hide();
         }
     };
+
+
+
 
     /**
      * Schedules a call to hide() in [delay] milliseconds, canceling any

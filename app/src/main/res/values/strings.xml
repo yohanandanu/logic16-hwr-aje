@@ -8,5 +8,9 @@
     <string name="start_game">Start Game</string>
     <string name="show_highscore">Highscorelist</string>
     <string name="title_activity_game_screen">GameScreen</string>
+    <string name="game_over">Game Over!</string>
+    <string name="your_score">Your Score is :</string>
+    <string name="try_again">Try Again</string>
+    <string name="add_highscore">Add Highscore</string>
 
 </resources>

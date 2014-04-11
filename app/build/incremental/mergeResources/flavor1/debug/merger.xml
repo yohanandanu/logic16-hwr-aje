@@ -7503,13 +7503,21 @@ false
             <file
                 path="C:\Users\Engin\AndroidStudioProjects\Logic16\app\src\main\res\values\colors.xml"
                 qualifiers="" >
+                <color name="green" >#FF7cfc00
+                </color>
+                <color name="red" >#ffff0000
+                </color>
                 <color name="black_overlay" >#66000000
+                </color>
+                <color name="backgroundBlue" >#F40099CC
                 </color>
             </file>
             <file
                 path="C:\Users\Engin\AndroidStudioProjects\Logic16\app\src\main\res\values\strings.xml"
                 qualifiers="" >
                 <string name="start_game" >Start Game
+                </string>
+                <string name="game_over" >Game Over!
                 </string>
                 <string name="show_highscore" >Highscorelist
                 </string>
@@ -7519,7 +7527,13 @@ false
                 </string>
                 <string name="app_name" >Logic16
                 </string>
+                <string name="try_again" >Try Again
+                </string>
+                <string name="add_highscore" >Add Highscore
+                </string>
                 <string name="welcome_text" >Welcome to Logic16
+                </string>
+                <string name="your_score" >Your Score is :
                 </string>
                 <string name="dummy_content" >DUMMY\nCONTENT
                 </string>
@@ -7533,6 +7547,15 @@ false
                     parent="Theme.AppCompat.Light.DarkActionBar" >
 
                     <!-- Customize your theme here. -->
+                </style>
+
+                <style name="rectangleImageView" >
+                    <item name="android:padding">
+2dp
+                    </item>
+                    <item name="android:layout_margin">
+2dp
+                    </item>
                 </style>
 
                 <style name="ButtonBarButton" />
@@ -7571,6 +7594,9 @@ false
 @style/ButtonBarButton
                     </item>
                 </style>
+
+                <style name="roundImageView" >
+                </style>
             </file>
             <file
                 path="C:\Users\Engin\AndroidStudioProjects\Logic16\app\src\main\res\values-v11\styles.xml"
@@ -7605,15 +7631,20 @@ true
                 </style>
             </file>
             <file
-                name="table_row_line"
-                path="C:\Users\Engin\AndroidStudioProjects\Logic16\app\src\main\res\layout\table_row_line.xml"
+                name="highscore_list"
+                path="C:\Users\Engin\AndroidStudioProjects\Logic16\app\src\main\res\layout\highscore_list.xml"
                 qualifiers=""
                 type="layout" />
             <file
-                name="image_button_rectangle"
-                path="C:\Users\Engin\AndroidStudioProjects\Logic16\app\src\main\res\layout\image_button_rectangle.xml"
+                name="add_highscore"
+                path="C:\Users\Engin\AndroidStudioProjects\Logic16\app\src\main\res\layout\add_highscore.xml"
                 qualifiers=""
                 type="layout" />
+            <file
+                name="rounded_corner"
+                path="C:\Users\Engin\AndroidStudioProjects\Logic16\app\src\main\res\drawable-hdpi\rounded_corner.xml"
+                qualifiers="hdpi"
+                type="drawable" />
         </source>
         <source path="C:\Users\Engin\AndroidStudioProjects\Logic16\app\build\res\rs\flavor1\debug" />
         <source path="C:\Users\Engin\AndroidStudioProjects\Logic16\app\build\res\generated\flavor1\debug" />
