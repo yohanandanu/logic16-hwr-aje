@@ -1,1 +1,6 @@
 = Spielen =
+
+[Siegscreen bei Sieg]
+[Verlorenscreen bei Niederlage]
+
+http://cdn.imghack.se/images/f5ee28abacff2e35345080ed424e9dff.jpg
