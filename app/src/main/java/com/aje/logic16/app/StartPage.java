@@ -170,6 +170,7 @@ public class StartPage extends Activity {
     }
 
     public void show_highscore(View view) {
-        setContentView(R.layout.highscore_list);
+        Intent intent = new Intent(this, HighScoreActivity.class);
+        startActivity(intent);
     }
 }

@@ -12,5 +12,8 @@
     <string name="your_score">Your Score is :</string>
     <string name="try_again">Try Again</string>
     <string name="add_highscore">Add Highscore</string>
+    <string name="title_activity_high_score">Highscores</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
 
 </resources>
