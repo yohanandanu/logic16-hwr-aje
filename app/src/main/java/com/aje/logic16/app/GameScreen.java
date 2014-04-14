@@ -70,6 +70,7 @@ public class GameScreen extends Activity {
 
     private DisplayMetrics mMetrics = new DisplayMetrics();
 
+    @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

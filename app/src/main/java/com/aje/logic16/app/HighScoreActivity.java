@@ -1,8 +1,10 @@
 package com.aje.logic16.app;
 
+import android.annotation.TargetApi;
 import android.app.ActionBar;
 import android.content.Context;
 import android.database.DataSetObserver;
+import android.os.Build;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -25,6 +27,7 @@ import java.util.ListIterator;
 
 public class HighScoreActivity extends ActionBarActivity {
 
+    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,15 +50,7 @@ public class HighScoreActivity extends ActionBarActivity {
         HighscoreList.setAdapter(ListAdapter);
         ListAdapter.notifyDataSetChanged();
 
-        //LinearLayout.LayoutParams imageLayoutParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT,LinearLayout.LayoutParams.WRAP_CONTENT);
-        try {
-
         addContentView(highScoreActivity,new ActionBar.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT,LinearLayout.LayoutParams.WRAP_CONTENT));
-        }
-        catch (Exception e)
-        {
-            e.getMessage();
-        }
     }
 
 
