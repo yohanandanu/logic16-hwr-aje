@@ -37,9 +37,9 @@ public class HighscoreListAdapter extends ArrayAdapter<highScore>{
         TextView name = (TextView) rowView.findViewById(R.id.highscoreListItemName);
         TextView score = (TextView) rowView.findViewById(R.id.highscoreListItemScore);
 
-        rank.setText(position);
-        name.setText(values[position].getName());
-        score.setText(Integer.toString(values[position].getScore()));
+        rank.setText(Integer.toString(position+1));
+        name.setText(values[position+1].getName());
+        score.setText(Integer.toString(values[position+1].getScore()));
 
         return rowView;
     }

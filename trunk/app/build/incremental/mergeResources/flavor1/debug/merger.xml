@@ -7529,7 +7529,7 @@ false
                 </string>
                 <string name="add_highscore" >Add Highscore
                 </string>
-                <string name="welcome_text" >Welcome to Logic16
+                <string name="welcome_text" >Logic16
                 </string>
                 <string name="your_score" >Your Score is :
                 </string>
@@ -7637,11 +7637,6 @@ true
                 </style>
             </file>
             <file
-                name="highscore_list"
-                path="C:\Users\Engin\AndroidStudioProjects\Logic16\app\src\main\res\layout\highscore_list.xml"
-                qualifiers=""
-                type="layout" />
-            <file
                 name="add_highscore"
                 path="C:\Users\Engin\AndroidStudioProjects\Logic16\app\src\main\res\layout\add_highscore.xml"
                 qualifiers=""
@@ -7678,6 +7673,11 @@ true
             <file
                 name="highscore_list_item"
                 path="C:\Users\Engin\AndroidStudioProjects\Logic16\app\src\main\res\layout\highscore_list_item.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="highscore_list"
+                path="C:\Users\Engin\AndroidStudioProjects\Logic16\app\src\main\res\layout\highscore_list.xml"
                 qualifiers=""
                 type="layout" />
         </source>

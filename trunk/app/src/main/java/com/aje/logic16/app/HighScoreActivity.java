@@ -29,9 +29,11 @@ public class HighScoreActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        setContentView(R.layout.activity_high_score);
+
         LayoutInflater inflater = (LayoutInflater)this.getSystemService
                 (Context.LAYOUT_INFLATER_SERVICE);
-        ViewGroup highScoreActivity = (ViewGroup) inflater.inflate(R.layout.activity_high_score,null);
+        ViewGroup highScoreActivity = (ViewGroup) inflater.inflate(R.layout.highscore_list,null);
         highScore[] highScores = new highScore[11];
         api myApi = new api();
 
@@ -46,8 +48,14 @@ public class HighScoreActivity extends ActionBarActivity {
         ListAdapter.notifyDataSetChanged();
 
         //LinearLayout.LayoutParams imageLayoutParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT,LinearLayout.LayoutParams.WRAP_CONTENT);
+        try {
 
-        setContentView(R.layout.activity_high_score);
+        addContentView(highScoreActivity,new ActionBar.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT,LinearLayout.LayoutParams.WRAP_CONTENT));
+        }
+        catch (Exception e)
+        {
+            e.getMessage();
+        }
     }
 
 

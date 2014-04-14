@@ -24,8 +24,10 @@ import org.apache.http.util.EntityUtils;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
@@ -50,7 +52,7 @@ public class api {
 
     private int get(String url, ApiResponse out){
         try {
-            out.response = new HttpTask().execute("GET",url).get();
+            out.response = new HttpGetTask().execute(url).get();
             return 1;
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -63,8 +65,8 @@ public class api {
 
     private int post(String URL, List<NameValuePair> Data){
         // Create a new HttpClient and Post Header
-
-        return 0;
+            AsyncTask resp = new HttpPostTask(Data).execute(URL);
+            return 1;
     }
 
     private int postScore(String name, int score)
@@ -97,6 +99,13 @@ public class api {
         else return Integer.toString(res);
     }
 
+
+    public String getFormula()
+    {
+        return getForm();
+        //return "";
+    }
+
     public highScore getHighScore(int pos) throws IllegalArgumentException
     {
         String name = "";
@@ -118,6 +127,11 @@ public class api {
         }
         else throw new IllegalArgumentException();
     }
+
+    public void addScore(highScore score)
+    {
+        postScore(score.getName(),score.getScore());
+    }
 }
 
 
@@ -129,7 +143,7 @@ class ApiResponse<T> {
 }
 
 
-class HttpTask extends AsyncTask<String,String,String>
+class HttpGetTask extends AsyncTask<String,Integer,String>
 {
 
     @Override
@@ -139,6 +153,7 @@ class HttpTask extends AsyncTask<String,String,String>
         // update textview here
     }
 
+
     @Override
     protected void onPreExecute() {
         // TODO Auto-generated method stub
@@ -147,27 +162,87 @@ class HttpTask extends AsyncTask<String,String,String>
 
     @Override
     protected String doInBackground(String... params) {
-        String methodParam = params[0];
-        String URL = params[1];
+        String URL = params[0];
+        HttpGet requestGet = new HttpGet(URL);
+        requestGet.addHeader("User-Agent", HTTP.USER_AGENT);
+        return handleRequest(requestGet);
+
+    }
 
 
+    private String handleRequest(HttpUriRequest request)
+    {
+        HttpClient httpclient = new DefaultHttpClient();
 
-        if (methodParam.contentEquals("GET"))
+        try
         {
-            HttpGet requestGet = new HttpGet(URL);
-            requestGet.addHeader("User-Agent", HTTP.USER_AGENT);
-            return handleRequest(requestGet);
+            HttpResponse response = httpclient.execute(request);
+
+            BufferedReader rd = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));
+            StringBuffer result = new StringBuffer();
+            String line = "";
+            while ((line = rd.readLine()) != null) {
+                result.append(line);
+            }
+            if(response.getStatusLine().getStatusCode()== HttpStatus.SC_OK){
+                System.out.println("Response : " +
+                        result.toString());
+                return result.toString();
+            } else
+            {
+                throw new NetworkErrorException();
+            }
+
+        } catch (ClientProtocolException e) {
+            e.getMessage();
+        } catch (IOException e) {
+            e.getMessage();
+        } catch (Exception e)
+        {
+            e.getMessage();
         }
-        else if (methodParam.contentEquals("POST"))
-        {
-            String Data = (String) params[2];
-            HttpPost request = (HttpPost) new HttpPost(URL);
-            //request.setEntity(new UrlEncodedFormEntity(Data, HTTP.UTF_8));
+        return "";
+    }
+}
+
+
+class HttpPostTask extends AsyncTask<String,Integer,String>
+{
+    private List<NameValuePair> mData = null;// post data
+
+    /**
+     * constructor
+     */
+    public HttpPostTask(List<NameValuePair> data) {
+        mData = data;
+    }
+
+    @Override
+    protected void onPostExecute(String result) {
+        // TODO Auto-generated method stub
+        super.onPostExecute(result);
+        // update textview here
+    }
+
+
+    @Override
+    protected void onPreExecute() {
+        // TODO Auto-generated method stub
+        super.onPreExecute();
+    }
+
+    @Override
+    protected String doInBackground(String... params) {
+        String URL = params[0];
+        HttpPost request = (HttpPost) new HttpPost(URL);
+
+        try {
+            request.setEntity(new UrlEncodedFormEntity(mData, HTTP.UTF_8));
             return handleRequest(request);
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
         }
-
-        throw new IllegalArgumentException();
-
+        return "";
     }
 
 

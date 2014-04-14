@@ -546,7 +546,7 @@
     <string name="title_activity_game_screen">GameScreen</string>
     <string name="title_activity_high_score">Highscores</string>
     <string name="try_again">Try Again</string>
-    <string name="welcome_text">Welcome to Logic16</string>
+    <string name="welcome_text">Logic16</string>
     <string name="your_score">Your Score is :</string>
     <!-- From: file:/C:/Users/Engin/AndroidStudioProjects/Logic16/app/src/main/res/values/styles.xml -->
     <eat-comment />
