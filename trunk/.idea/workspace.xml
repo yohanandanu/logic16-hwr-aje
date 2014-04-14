@@ -42,7 +42,7 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="app: com.aje.logic16.app" />
   </component>
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/app/src/main/java/com/aje/logic16/app/GameScreen.java" line="228" mnemonic="7" />
+    <bookmark url="file://$PROJECT_DIR$/app/src/main/java/com/aje/logic16/app/GameScreen.java" line="229" mnemonic="7" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2272b706-a57c-4410-a73d-2f3bfd6a10ef" name="Default" comment="" />
@@ -99,128 +99,7 @@
       </breakpoint>
     </breakpoint_any>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/app/src/main/java/com/aje/logic16/app/HighScoreActivity.java" line="56" class="com.aje.logic16.app.HighScoreActivity" package="com.aje.logic16.app">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/app/src/main/java/com/aje/logic16/app/HighScoreActivity.java" line="35" class="com.aje.logic16.app.HighScoreActivity" package="com.aje.logic16.app">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/app/src/main/java/com/aje/logic16/app/HighScoreActivity.java" line="44" class="com.aje.logic16.app.HighScoreActivity" package="com.aje.logic16.app">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/app/src/main/java/com/aje/logic16/app/HighScoreActivity.java" line="36" class="com.aje.logic16.app.HighScoreActivity" package="com.aje.logic16.app">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/app/src/main/java/com/aje/logic16/app/HighScoreActivity.java" line="45" class="com.aje.logic16.app.HighScoreActivity" package="com.aje.logic16.app">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/app/src/main/java/com/aje/logic16/app/HighScoreActivity.java" line="52" class="com.aje.logic16.app.HighScoreActivity" package="com.aje.logic16.app">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/app/src/main/java/com/aje/logic16/app/HighScoreActivity.java" line="47" class="com.aje.logic16.app.HighScoreActivity" package="com.aje.logic16.app">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/app/src/main/java/com/aje/logic16/app/HighScoreActivity.java" line="46" class="com.aje.logic16.app.HighScoreActivity" package="com.aje.logic16.app">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -229,88 +108,7 @@
     <favorites_list name="Logic16" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="add_highscore.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/add_highscore.xml">
-          <provider editor-type-id="text-editor">
-            <state line="64" column="47" selection-start="2496" selection-end="2496" vertical-scroll-proportion="0.0" vertical-offset="867" max-vertical-offset="1309">
-              <folding />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="android-designer">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="styles.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="46" selection-start="1026" selection-end="1026" vertical-scroll-proportion="0.0" vertical-offset="111" max-vertical-offset="680">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GameScreen.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/aje/logic16/app/GameScreen.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="273" column="0" selection-start="10816" selection-end="10816" vertical-scroll-proportion="0.0" vertical-offset="3783" max-vertical-offset="4284">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HighscoreListAdapter.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/aje/logic16/app/HighScoreLogic/HighscoreListAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="0" selection-start="1317" selection-end="1317" vertical-scroll-proportion="0.4265928" vertical-offset="322" max-vertical-offset="697">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HighScoreActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/aje/logic16/app/HighScoreActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="0" selection-start="1831" selection-end="1831" vertical-scroll-proportion="0.0" vertical-offset="768" max-vertical-offset="1496">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="highscore_list.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/highscore_list.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="0" selection-start="226" selection-end="226" vertical-scroll-proportion="-3.4" vertical-offset="0" max-vertical-offset="289">
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="api.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/aje/logic16/app/serverApi/api.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="96" column="0" selection-start="3369" selection-end="3369" vertical-scroll-proportion="0.0" vertical-offset="1988" max-vertical-offset="4386">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="82" selection-start="227" selection-end="227" vertical-scroll-proportion="0.0" vertical-offset="26" max-vertical-offset="697">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -1027,13 +825,13 @@
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_start_page.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/aje/logic16/app/GameScreen.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/aje/logic16/app/StartPage.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/aje/logic16/app/serverApi/api.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_high_score.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/highscore_list.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/aje/logic16/app/HighScoreActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/aje/logic16/app/HighScoreLogic/HighscoreListAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/aje/logic16/app/HighScoreActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/aje/logic16/app/GameScreen.java" />
       </list>
     </option>
   </component>
@@ -1664,16 +1462,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/add_highscore.xml">
-      <provider editor-type-id="text-editor">
-        <state line="64" column="47" selection-start="2496" selection-end="2496" vertical-scroll-proportion="0.0" vertical-offset="867" max-vertical-offset="1309">
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/aje/logic16/app/HighScoreLogic/highScore.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="25" selection-start="389" selection-end="389" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
@@ -1708,26 +1496,9 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/aje/logic16/app/serverApi/api.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="0" selection-start="3369" selection-end="3369" vertical-scroll-proportion="0.0" vertical-offset="1019" max-vertical-offset="4386">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/highscore_list_item.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="30" selection-start="776" selection-end="776" vertical-scroll-proportion="0.96130955" vertical-offset="0" max-vertical-offset="782">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/highscore_list.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="226" selection-end="226" vertical-scroll-proportion="-3.4" vertical-offset="0" max-vertical-offset="289">
           <folding />
         </state>
       </provider>
@@ -1745,30 +1516,9 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="82" selection-start="227" selection-end="227" vertical-scroll-proportion="0.0" vertical-offset="26" max-vertical-offset="697">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="46" selection-start="1026" selection-end="1026" vertical-scroll-proportion="0.0" vertical-offset="349" max-vertical-offset="680">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/aje/logic16/app/GameScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="273" column="0" selection-start="10816" selection-end="10816" vertical-scroll-proportion="0.0" vertical-offset="3936" max-vertical-offset="4284">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/aje/logic16/app/HighScoreActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="0" selection-start="1831" selection-end="1831" vertical-scroll-proportion="0.0" vertical-offset="768" max-vertical-offset="1496">
+        <state line="52" column="53" selection-start="1811" selection-end="1811" vertical-scroll-proportion="1.7988505" vertical-offset="258" max-vertical-offset="1411">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1777,7 +1527,55 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/aje/logic16/app/HighScoreLogic/HighscoreListAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="0" selection-start="1317" selection-end="1317" vertical-scroll-proportion="0.4265928" vertical-offset="322" max-vertical-offset="697">
+        <state line="38" column="0" selection-start="1316" selection-end="1316" vertical-scroll-proportion="1.2714682" vertical-offset="0" max-vertical-offset="697">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/aje/logic16/app/GameScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="140" column="40" selection-start="5877" selection-end="5877" vertical-scroll-proportion="3.979885" vertical-offset="485" max-vertical-offset="4301">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="46" selection-start="1026" selection-end="1026" vertical-scroll-proportion="0.8698061" vertical-offset="111" max-vertical-offset="680">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/add_highscore.xml">
+      <provider editor-type-id="text-editor">
+        <state line="64" column="47" selection-start="2496" selection-end="2496" vertical-scroll-proportion="0.0" vertical-offset="867" max-vertical-offset="1309">
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/highscore_list.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="0" selection-start="226" selection-end="226" vertical-scroll-proportion="0.25297618" vertical-offset="0" max-vertical-offset="336">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/aje/logic16/app/serverApi/api.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="96" column="0" selection-start="3369" selection-end="3369" vertical-scroll-proportion="-2.3518004" vertical-offset="1988" max-vertical-offset="4386">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="82" selection-start="227" selection-end="227" vertical-scroll-proportion="0.11634349" vertical-offset="26" max-vertical-offset="697">
           <folding />
         </state>
       </provider>
