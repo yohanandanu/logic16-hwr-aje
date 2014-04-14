@@ -3,6 +3,7 @@ package com.aje.logic16.app.serverApi;
 import android.accounts.NetworkErrorException;
 import android.os.AsyncTask;
 
+import com.aje.logic16.app.HighScoreLogic.HighscoreListAdapter;
 import com.aje.logic16.app.HighScoreLogic.highScore;
 
 import org.apache.http.HttpEntity;
@@ -58,10 +59,16 @@ public class api {
             e.printStackTrace();
         } catch (ExecutionException e) {
             e.printStackTrace();
+        } catch (Exception e)
+        {
+            e.printStackTrace();
         }
+
 
         return 0;
     }
+
+
 
     private int post(String URL, List<NameValuePair> Data){
         // Create a new HttpClient and Post Header
