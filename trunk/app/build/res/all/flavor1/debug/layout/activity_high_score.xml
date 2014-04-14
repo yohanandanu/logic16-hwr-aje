@@ -14,3 +14,4 @@
         android:layout_height="wrap_content"
         android:id="@+id/highscoreListView" />
 </RelativeLayout>
+<!-- From: file:/C:/Users/Engin/AndroidStudioProjects/Logic16/app/src/main/res/layout/activity_high_score.xml -->
