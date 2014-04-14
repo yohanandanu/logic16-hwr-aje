@@ -7523,6 +7523,8 @@ false
                 </string>
                 <string name="dummy_button" >Dummy Button
                 </string>
+                <string name="highscores" >HIGHSCORES
+                </string>
                 <string name="action_settings" >Settings
                 </string>
                 <string name="app_name" >Logic16
@@ -7657,11 +7659,6 @@ true
                 path="C:\Users\Engin\AndroidStudioProjects\Logic16\app\src\main\res\layout\activity_high_score.xml"
                 qualifiers=""
                 type="layout" />
-            <file
-                name="high_score"
-                path="C:\Users\Engin\AndroidStudioProjects\Logic16\app\src\main\res\menu\high_score.xml"
-                qualifiers=""
-                type="menu" />
             <file
                 path="C:\Users\Engin\AndroidStudioProjects\Logic16\app\src\main\res\values\dimens.xml"
                 qualifiers="" >
