@@ -541,6 +541,7 @@
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="game_over">Game Over!</string>
     <string name="hello_world">Hello world!</string>
+    <string name="highscores">HIGHSCORES</string>
     <string name="show_highscore">Highscorelist</string>
     <string name="start_game">Start Game</string>
     <string name="title_activity_game_screen">GameScreen</string>
