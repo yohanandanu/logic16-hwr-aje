@@ -1,5 +1,7 @@
 package com.aje.logic16.app;
 
+import com.aje.logic16.app.HighScoreLogic.highScore;
+import com.aje.logic16.app.serverApi.api;
 import com.aje.logic16.app.util.SystemUiHider;
 import com.aje.logic16.app.R;
 import android.annotation.TargetApi;
@@ -42,7 +44,7 @@ public class GameScreen extends Activity {
      * Whether or not the system UI should be auto-hidden after
      * {@link #AUTO_HIDE_DELAY_MILLIS} milliseconds.
      */
-    private static final boolean AUTO_HIDE = true;
+    private static final boolean AUTO_HIDE = false;
 
     /**
      * If {@link #AUTO_HIDE} is set, the number of milliseconds to wait after
@@ -54,7 +56,7 @@ public class GameScreen extends Activity {
      * If set, will toggle the system UI visibility upon interaction. Otherwise,
      * will show the system UI visibility upon interaction.
      */
-    private static final boolean TOGGLE_ON_CLICK = true;
+    private static final boolean TOGGLE_ON_CLICK = false;
 
     /**
      * The flags to pass to {@link SystemUiHider#getInstance}.
@@ -97,6 +99,12 @@ public class GameScreen extends Activity {
 
         LinearLayout.LayoutParams imageLayoutParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT,LinearLayout.LayoutParams.WRAP_CONTENT);
         imageLayoutParams.setMargins((int)Math.round(mMetrics.density*2),(int)Math.round(mMetrics.density*2),(int)Math.round(mMetrics.density*2),(int)Math.round(mMetrics.density*2));
+
+
+      //  api myApi = new api();
+      //  highScore score = new highScore("TestEintrag",23456786);
+      //  myApi.addScore(score);
+      //  score.toString();
 
         for (int i=0; i<16 ;i++)
         {
