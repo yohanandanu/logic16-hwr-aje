@@ -125,7 +125,7 @@ public class api {
 
             String[] responseSplit = response.split("#");
 
-            if (responseSplit[0].length() <= 0 || responseSplit[1].length() <= 0)
+            if (responseSplit[0].length() < 0 || responseSplit[1].length() <= 0)
                 throw new IllegalArgumentException();
 
             name = responseSplit[0];
