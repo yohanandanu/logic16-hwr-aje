@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.aje.logic16.app.WonGameActivity"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/blacker_overlay"
+        android:gravity="center_vertical|center_horizontal"
+        android:padding="30dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/won_game"
+            android:autoText="false"
+            style="@style/won_game_string" />
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/your_score"
+                style="@style/StandardText" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/actualScore"
+                style="@style/StandardText" />
+        </LinearLayout>
+
+
+        <Button
+            style="@style/ButtonBarButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/continue_playing"
+            android:id="@+id/continue_button"
+            android:background="@color/backgroundBlue"
+            android:clickable="true"
+            android:textAlignment="center"
+            android:padding="10dp"
+            android:enabled="true"
+            android:focusable="true"
+            android:onClick="continue_game"
+            android:focusableInTouchMode="true" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_marginTop="40dp"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/played_enough"
+                style="@style/have_enough" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:hint="@string/add_highscore_hint"
+                android:id="@+id/namePerson" />
+
+            <Button
+                style="@style/ButtonBarButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hi_back_to_start"
+                android:id="@+id/addHighscoreButton"
+                android:onClick="add_highscore"
+                android:background="@color/backgroundBlue"
+                android:clickable="true"
+                android:padding="10dp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</FrameLayout>

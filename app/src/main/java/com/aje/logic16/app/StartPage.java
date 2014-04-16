@@ -178,4 +178,5 @@ public class StartPage extends Activity {
         Intent intent = new Intent(this, HighScoreActivity.class);
         startActivity(intent);
     }
+
 }

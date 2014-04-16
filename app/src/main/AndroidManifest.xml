@@ -30,6 +30,19 @@
             android:name="com.aje.logic16.app.HighScoreActivity"
             android:label="@string/title_activity_high_score" >
         </activity>
+
+        <activity
+            android:name="com.aje.logic16.app.WonGameActivity"
+            android:label="@string/title_activity_high_score"
+            android:theme="@style/Transparent">
+        </activity>
+
+        <activity
+            android:name="com.aje.logic16.app.GameOverActivity"
+            android:label="@string/title_activity_high_score"
+            android:theme="@style/Transparent">
+        </activity>
+
     </application>
 
 </manifest>

@@ -8,9 +8,11 @@ import android.annotation.TargetApi;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.ColorFilter;
 import android.graphics.LightingColorFilter;
+import android.graphics.PixelFormat;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
@@ -23,8 +25,11 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewParent;
 import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -78,9 +83,9 @@ public class GameScreen extends Activity {
 
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 
-        LayoutInflater inflater = (LayoutInflater)this.getSystemService
+        final LayoutInflater inflater = (LayoutInflater)this.getSystemService
                 (Context.LAYOUT_INFLATER_SERVICE);
-        ViewGroup gameScreen = (ViewGroup) inflater.inflate(R.layout.activity_game_screen,null);
+        final ViewGroup gameScreen = (ViewGroup) inflater.inflate(R.layout.activity_game_screen,null);
 
         LinearLayout.LayoutParams LLVParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
         LinearLayout.LayoutParams LLHParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
@@ -154,6 +159,23 @@ public class GameScreen extends Activity {
         llHorizontal.setLayoutParams(LLHParams);
         llHorizontal.setGravity(Gravity.CENTER_HORIZONTAL);
 
+
+        View.OnClickListener myClickListener = new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent;
+                intent = new Intent(getBaseContext(),WonGameActivity.class);
+                startActivity(intent);
+            }
+        };
+
+        View.OnClickListener my2ndClickListener = new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent;
+                intent = new Intent(getBaseContext(),GameOverActivity.class);
+                startActivity(intent);
+            }
+        };
+
         for (int j=0;j<9;j++)
         {
 
@@ -163,6 +185,13 @@ public class GameScreen extends Activity {
             image.setLayoutParams(imageLayoutParams);
             image.setBackgroundColor(Color.GREEN);
             image.setText("+");
+            if (j<4)
+            {
+                image.setOnClickListener(myClickListener);
+            } else
+            {
+                image.setOnClickListener(my2ndClickListener);
+            }
             image.setGravity(Gravity.CENTER);
             if (j==8) image.setVisibility(View.INVISIBLE);
             llHorizontal.addView(image);
@@ -282,4 +311,6 @@ public class GameScreen extends Activity {
         mHideHandler.removeCallbacks(mHideRunnable);
         mHideHandler.postDelayed(mHideRunnable, delayMillis);
     }
+
+
 }
