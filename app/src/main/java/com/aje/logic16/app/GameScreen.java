@@ -17,6 +17,7 @@ import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.os.Handler;
 import android.util.DisplayMetrics;
 import android.view.ContextThemeWrapper;
@@ -28,11 +29,14 @@ import android.view.ViewGroup;
 import android.view.ViewParent;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.RotateAnimation;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -106,6 +110,43 @@ public class GameScreen extends Activity {
         LinearLayout.LayoutParams imageLayoutParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT,LinearLayout.LayoutParams.WRAP_CONTENT);
         imageLayoutParams.setMargins((int)Math.round(mMetrics.density*2),(int)Math.round(mMetrics.density*2),(int)Math.round(mMetrics.density*2),(int)Math.round(mMetrics.density*2));
 
+        //Example for a CountDownTimer
+        CountDownTimer mCountDownTimer;
+        int total=100;
+        final int thirtySeconds= 1 * 30 * 1000;
+
+
+        ViewGroup CountDownElement = (ViewGroup) getLayoutInflater().inflate(R.layout.count_down, null);
+        final ProgressBar pb = (ProgressBar) CountDownElement.findViewById(R.id.progressBar);
+        final TextView pbText = (TextView) CountDownElement.findViewById(R.id.seconds);
+        pbText.setText(Integer.toString(Math.round((thirtySeconds / 1000))));
+
+        pb.setProgress(total);
+        pb.setMax(total);
+        Animation an = new RotateAnimation(0.0f, 90.0f, 250f, 273f);
+        an.setFillAfter(true);
+        pb.startAnimation(an);
+        mCountDownTimer=new CountDownTimer(thirtySeconds,1000) {
+
+            @Override
+            public void onTick(long millisUntilFinished) {
+                double un = ((double)millisUntilFinished/ (double)thirtySeconds);
+                int total = (int) Math.round(un * 100);
+                pb.setProgress(total);
+                pbText.setText(Integer.toString(Math.round(millisUntilFinished/1000)));
+            }
+
+            @Override
+            public void onFinish() {
+                //Do what you want
+                pb.setProgress(0);
+                pbText.setText("0");
+            }
+        };
+        LinearLayout.LayoutParams CCTParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+        llVertical.addView(CountDownElement,CCTParams);
+        mCountDownTimer.start();
+        //Example for a CountDownTimer END
 
       //  api myApi = new api();
       //  highScore score = new highScore("TestEintrag",23456786);
@@ -202,7 +243,6 @@ public class GameScreen extends Activity {
         llVertical.addView(llHorizontal);
 
         addContentView(llVertical,LLVParams);
-
 
 
 /*
