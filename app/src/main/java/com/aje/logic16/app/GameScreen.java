@@ -1,5 +1,7 @@
 package com.aje.logic16.app;
 
+import com.aje.logic16.app.GameLogic.Conjunction;
+import com.aje.logic16.app.GameLogic.GameLogic;
 import com.aje.logic16.app.HighScoreLogic.highScore;
 import com.aje.logic16.app.serverApi.api;
 import com.aje.logic16.app.util.SystemUiHider;
@@ -79,6 +81,43 @@ public class GameScreen extends Activity {
 
     private DisplayMetrics mMetrics = new DisplayMetrics();
 
+    @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        getWindowManager().getDefaultDisplay().getMetrics(mMetrics);
+
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+
+        //final LayoutInflater inflater = (LayoutInflater)this.getSystemService
+        //       (Context.LAYOUT_INFLATER_SERVICE);
+        //final ViewGroup gameScreen = (ViewGroup) inflater.inflate(R.layout.activity_game_screen,null);
+
+        createLayout();
+    }
+
+    private void createLayout()
+    {
+        LinearLayout.LayoutParams LLVParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
+        final LinearLayout llVertical = new LinearLayout(this);
+        llVertical.setOrientation(LinearLayout.VERTICAL);
+        llVertical.setBackgroundColor(getResources().getColor(R.color.backgroundBlue));
+        llVertical.setGravity(Gravity.CENTER);
+        //llVertical.setWeightSum(6f);
+        llVertical.setLayoutParams(LLVParams);
+
+        // Alle Konjunktionen holen und zur View hinzufügen
+        Conjunction[] conjunctions = GameLogic.getInstance().getConjunction(this, mMetrics);
+        for (Conjunction conjunction : conjunctions) {
+            llVertical.addView(conjunction);
+        }
+
+        llVertical.addView(GameLogic.getInstance().getButtonRow(this, mMetrics));
+        addContentView(llVertical,LLVParams);
+    }
+
+
+/*
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -245,7 +284,7 @@ public class GameScreen extends Activity {
         addContentView(llVertical,LLVParams);
 
 
-/*
+
         // Set up an instance of SystemUiHider to control the system UI for
         // this activity.
         mSystemUiHider = SystemUiHider.getInstance(this, llVertical, HIDER_FLAGS);
@@ -299,12 +338,13 @@ public class GameScreen extends Activity {
                 }
             }
         });
-*/
+
         // Upon interacting with UI controls, delay any scheduled hide()
         // operations to prevent the jarring behavior of controls going away
         // while interacting with the UI.
         //findViewById(R.id.dummy_button).setOnTouchListener(mDelayHideTouchListener);
-    }
+        }
+    */
 
     @Override
     protected void onPostCreate(Bundle savedInstanceState) {
