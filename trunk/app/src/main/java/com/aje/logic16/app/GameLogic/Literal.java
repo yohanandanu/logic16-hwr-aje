@@ -81,10 +81,13 @@ public class Literal extends TextView {
             this.setBackgroundColor(Color.GREEN);
             this.setText("+");
         }
-        else
+        else if (value == E_LITERAL_VALUE.NEGATIV)
         {
             this.setBackgroundColor(Color.RED);
             this.setText("-");
+        } else
+        {
+            this.setBackgroundColor(Color.TRANSPARENT);
         }
     }
 }
