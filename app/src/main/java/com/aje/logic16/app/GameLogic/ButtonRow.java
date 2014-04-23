@@ -18,14 +18,14 @@ public class ButtonRow extends Row
 
     LiteralButton[] mButtons = new LiteralButton[GameLogic.NUM_LITERALS];
 
-    public ButtonRow(Context widget, DisplayMetrics metrics)
+    public ButtonRow(Context widget, DisplayMetrics metrics, GameLogic buttonClickReceiver)
     {
         super(widget, metrics);
 
-        createButtons(metrics);
+        createButtons(metrics, buttonClickReceiver);
     }
 
-    private void createButtons(DisplayMetrics metrics)
+    private void createButtons(DisplayMetrics metrics, GameLogic buttonClickReceiver)
     {
         int imageWidth = metrics.widthPixels / (GameLogic.NUM_LITERALS + GameLogic.NUM_RESULT_COLUMN + 2); // 8 images + 1 result image + some place (2)
         int imageHeight = metrics.heightPixels / (GameLogic.NUM_CONJUNCTIONS + 1 + 5); // 16 imageRows, + change Button (1) + some place (5)
@@ -36,7 +36,7 @@ public class ButtonRow extends Row
 
         for (int column=0;column < GameLogic.NUM_LITERALS; column++)
         {
-            mButtons[column] = new LiteralButton(rectangleImageViewContext, imageLayoutParams, Literal.E_LITERAL_VALUE.POSITIV, imageWidth, imageHeight, column);
+            mButtons[column] = new LiteralButton(rectangleImageViewContext, imageLayoutParams, Literal.E_LITERAL_VALUE.POSITIV, imageWidth, imageHeight, column, buttonClickReceiver);
             this.addView(mButtons[column]);
         }
 
