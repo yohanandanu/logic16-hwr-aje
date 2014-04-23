@@ -11,18 +11,17 @@ import android.widget.TextView;
  */
 public class Literal extends TextView {
 
-    public enum E_LITERAL_VALUE{
-        POSITIV,
-        NEGATIV,
-        NOT_SET,
-    };
+
 
     private E_LITERAL_VALUE mValue;
 
     /**
      * Konstruktor
-     * @param theme
+     * @param context
+     * @param imageLayoutParams
      * @param value
+     * @param width
+     * @param height
      */
     public Literal(ContextThemeWrapper context, LinearLayout.LayoutParams imageLayoutParams, E_LITERAL_VALUE value, int width, int height)
     {
@@ -37,6 +36,11 @@ public class Literal extends TextView {
         setOutput(mValue);
     }
 
+    public void setLiteral(E_LITERAL_VALUE value)
+    {
+        mValue = value;
+    }
+
     public E_LITERAL_VALUE getLiteral()
     {
         return mValue;
@@ -47,7 +51,7 @@ public class Literal extends TextView {
         if (mValue == E_LITERAL_VALUE.NOT_SET)
         {
             // Immer ok wenn der Literal nicht gesetzt ist
-            setOutput(E_LITERAL_VALUE.POSITIV);
+            setOutput(E_LITERAL_VALUE.NOT_SET);
         }
         else if (value == mValue)
         {
@@ -87,7 +91,8 @@ public class Literal extends TextView {
             this.setText("-");
         } else
         {
-            this.setBackgroundColor(Color.TRANSPARENT);
+            this.setBackgroundColor(Color.LTGRAY);
+            this.setText("");
         }
     }
 }

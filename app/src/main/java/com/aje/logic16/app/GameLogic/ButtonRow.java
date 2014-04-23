@@ -36,7 +36,7 @@ public class ButtonRow extends Row
 
         for (int column=0;column < GameLogic.NUM_LITERALS; column++)
         {
-            mButtons[column] = new LiteralButton(rectangleImageViewContext, imageLayoutParams, Literal.E_LITERAL_VALUE.POSITIV, imageWidth, imageHeight, column, buttonClickReceiver);
+            mButtons[column] = new LiteralButton(rectangleImageViewContext, imageLayoutParams, E_LITERAL_VALUE.POSITIV, imageWidth, imageHeight, column, buttonClickReceiver);
             this.addView(mButtons[column]);
         }
 

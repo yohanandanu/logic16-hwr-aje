@@ -81,7 +81,7 @@ public class GameScreen extends Activity {
 
     private DisplayMetrics mMetrics = new DisplayMetrics();
 
-    private GameLogic mGameLogic = new GameLogic();
+    private GameLogic mGameLogic = null;
 
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
     @Override
@@ -91,11 +91,15 @@ public class GameScreen extends Activity {
 
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 
+        mGameLogic = new GameLogic(this, mMetrics);
+
         //final LayoutInflater inflater = (LayoutInflater)this.getSystemService
         //       (Context.LAYOUT_INFLATER_SERVICE);
         //final ViewGroup gameScreen = (ViewGroup) inflater.inflate(R.layout.activity_game_screen,null);
 
         createLayout();
+
+        mGameLogic.loadGame();
     }
 
     private void createLayout()
@@ -109,7 +113,7 @@ public class GameScreen extends Activity {
         llVertical.setLayoutParams(LLVParams);
 
         // Alle Konjunktionen holen und zur View hinzufügen
-        Conjunction[] conjunctions = mGameLogic.getConjunction(this, mMetrics);
+        Conjunction[] conjunctions = mGameLogic.getConjunction();
         for (Conjunction conjunction : conjunctions) {
             llVertical.addView(conjunction);
         }
