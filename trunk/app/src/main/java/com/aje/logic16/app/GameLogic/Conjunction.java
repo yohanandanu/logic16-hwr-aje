@@ -38,11 +38,11 @@ public class Conjunction extends Row
 
         for (int j=0;j < GameLogic.NUM_LITERALS;j++)
         {
-            mLiterals[j] = new Literal(rectangleImageViewContext, imageLayoutParams, Literal.E_LITERAL_VALUE.POSITIV, imageWidth, imageHeight);
+            mLiterals[j] = new Literal(rectangleImageViewContext, imageLayoutParams, E_LITERAL_VALUE.POSITIV, imageWidth, imageHeight);
             this.addView(mLiterals[j]);
         }
 
-        mResult = new ConjunctionResult(rectangleImageViewContext, imageLayoutParams, Literal.E_LITERAL_VALUE.POSITIV, imageWidth, imageHeight);
+        mResult = new ConjunctionResult(rectangleImageViewContext, imageLayoutParams, E_LITERAL_VALUE.POSITIV, imageWidth, imageHeight);
         this.addView(mResult);
     }
 
@@ -54,5 +54,44 @@ public class Conjunction extends Row
         imageLayoutParams.setMargins(literalSpacing, literalSpacing, literalSpacing, literalSpacing);
 
         return imageLayoutParams;
+    }
+
+    public Literal getLiteral(int index)
+    {
+        if (index >= 0 && index < mLiterals.length)
+            return mLiterals[index];
+        return null;
+    }
+
+    public boolean isSolved(Assignment playerAssignment)
+    {
+        for (int literalIndex = 0; literalIndex < mLiterals.length; literalIndex++)
+        {
+            if (mLiterals[literalIndex].getLiteral() != E_LITERAL_VALUE.NOT_SET)
+            {
+                if (mLiterals[literalIndex].getLiteral() == playerAssignment.literals[literalIndex])
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    public void updateOutput(Assignment playerAssignment)
+    {
+        for (int literalIndex = 0; literalIndex < GameLogic.NUM_LITERALS; literalIndex++)
+        {
+            mLiterals[literalIndex].setUserAssignment(playerAssignment.literals[literalIndex]);
+        }
+
+        if (isSolved(playerAssignment) == true)
+        {
+            mResult.setOutput(E_LITERAL_VALUE.POSITIV);
+        }
+        else
+        {
+            mResult.setOutput(E_LITERAL_VALUE.NEGATIV);
+        }
     }
 }
