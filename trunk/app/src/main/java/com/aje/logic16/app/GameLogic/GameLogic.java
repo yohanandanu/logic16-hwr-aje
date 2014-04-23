@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.app.Activity;
 import android.util.DisplayMetrics;
+import android.widget.TextView;
 
 import com.aje.logic16.app.GameScreen;
 import com.aje.logic16.app.WonGameActivity;
@@ -28,6 +29,7 @@ public class GameLogic
     private ButtonRow mButtonRow = null;
     private Assignment mPlayerAssignment = new Assignment();
     private Context mWidget;
+    private HeaderRow mHeaderRow;
 
     /**
      * Constructor
@@ -39,11 +41,17 @@ public class GameLogic
         // schonmal alle Komponenten konstruieren
         createConjunctions(widget, metrics);
         mButtonRow = new ButtonRow(widget, metrics, this);
+        mHeaderRow = new HeaderRow(widget, metrics);
     }
 
-    public Conjunction[] getConjunction()
+    public Conjunction[] getConjunctions()
     {
         return mConjunctions;
+    }
+
+    public HeaderRow getHeaderRow()
+    {
+        return mHeaderRow;
     }
 
     private void createConjunctions(Context widget, DisplayMetrics metrics)
@@ -77,7 +85,11 @@ public class GameLogic
         updateScreen();
         if (isWon() == true)
         {
-            // Das Spiel wurde gewonnen also den Win Screen einblenden
+            // Das Spiel wurde gewonnen
+            // Score hochzählen
+            GameScore.getInstance().incrementScore();
+
+            // und den Win Screen einblenden
             Intent intent = new Intent(mWidget, WonGameActivity.class);
             mWidget.startActivity(intent);
         }

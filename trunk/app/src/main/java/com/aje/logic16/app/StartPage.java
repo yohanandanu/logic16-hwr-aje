@@ -1,5 +1,6 @@
 package com.aje.logic16.app;
 
+import com.aje.logic16.app.GameLogic.GameScore;
 import com.aje.logic16.app.util.SystemUiHider;
 
 import android.annotation.TargetApi;
@@ -170,6 +171,7 @@ public class StartPage extends Activity {
     }
 
     public void startGame(View view) {
+        GameScore.getInstance().resetScore();
         Intent intent = new Intent(this, GameScreen.class);
        startActivity(intent);
     }
