@@ -6,6 +6,7 @@ import android.app.Activity;
 import android.util.DisplayMetrics;
 import android.widget.TextView;
 
+import com.aje.logic16.app.GameOverActivity;
 import com.aje.logic16.app.GameScreen;
 import com.aje.logic16.app.WonGameActivity;
 import com.aje.logic16.app.serverApi.api;
@@ -30,6 +31,12 @@ public class GameLogic
     private Assignment mPlayerAssignment = new Assignment();
     private Context mWidget;
     private HeaderRow mHeaderRow;
+    /**
+     * Das Starten von der Verloren-Activity kann ein winzigen Augenblick, in dem der Spieler noch
+     * Klicken kann. Daher ist es möglich in der Zeit in der die Activity geladen wird, das Spiel
+     * noch zu gewinnen. Daher muss das Verhindert werden.
+     */
+    private boolean mbLost = false;
 
     /**
      * Constructor
@@ -41,7 +48,7 @@ public class GameLogic
         // schonmal alle Komponenten konstruieren
         createConjunctions(widget, metrics);
         mButtonRow = new ButtonRow(widget, metrics, this);
-        mHeaderRow = new HeaderRow(widget, metrics);
+        mHeaderRow = new HeaderRow(widget, metrics, this);
     }
 
     public Conjunction[] getConjunctions()
@@ -83,8 +90,11 @@ public class GameLogic
     {
         updatePlayerAssignment(column);
         updateScreen();
-        if (isWon() == true)
+        if ((isWon() == true) && (mbLost == false))
         {
+            // Der Timer muss gestoppt werden, damit das Spiel nicht verloren wird
+            mHeaderRow.stopTimer();
+
             // Das Spiel wurde gewonnen
             // Score hochzählen
             GameScore.getInstance().incrementScore();
@@ -125,5 +135,12 @@ public class GameLogic
             }
         }
         return true;
+    }
+
+    public void onTimeOver()
+    {
+        mbLost = true;
+        Intent intent = new Intent(mWidget, GameOverActivity.class);
+        mWidget.startActivity(intent);
     }
 }

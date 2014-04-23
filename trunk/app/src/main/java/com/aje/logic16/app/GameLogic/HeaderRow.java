@@ -2,6 +2,7 @@ package com.aje.logic16.app.GameLogic;
 
 import android.content.Context;
 import android.util.DisplayMetrics;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 /**
@@ -10,19 +11,17 @@ import android.widget.TextView;
 public class HeaderRow extends Row
 {
     private TextView mScoreText;
+    private TimerTextView mCountDown;
 
-    public HeaderRow(Context widget, DisplayMetrics metrics)
+    public HeaderRow(Context widget, DisplayMetrics metrics, GameLogic gameLogic)
     {
         super(widget, metrics);
 
-        createTexts(widget, metrics);
+        createTexts(widget, metrics, gameLogic);
     }
 
-    private void createTexts(Context widget, DisplayMetrics metrics)
+    private void createTexts(Context widget, DisplayMetrics metrics, GameLogic gameLogic)
     {
-        Row headerRow = new Row(widget, metrics);
-        this.addView(headerRow);
-
         int imageHeight = metrics.heightPixels / (GameLogic.NUM_CONJUNCTIONS + 1 + 5) ; // 16 imageRows, + change Button (1) + some place (5)
 
         mScoreText = new TextView(widget);
@@ -32,6 +31,19 @@ public class HeaderRow extends Row
         int textSize = metrics.heightPixels / (GameLogic.NUM_CONJUNCTIONS + 1 + 5) /2 ; // 16 imageRows, + change Button (1) + some place (5)
         mScoreText.setTextSize(textSize);
 
-        headerRow.addView(mScoreText);
+        this.addView(mScoreText);
+
+        mCountDown = new TimerTextView(widget, gameLogic);
+        LinearLayout.LayoutParams CCTParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+        this.addView(mCountDown.getCountDownElement(), CCTParams);
+    } 
+    public void startTimer()
+    {
+        mCountDown.startTimer();
+    }
+
+    public void stopTimer()
+    {
+        mCountDown.stopTimer();
     }
 }

@@ -73,6 +73,14 @@ public class GameScreen extends Activity {
         createLayout();
 
         mGameLogic.loadGame();
+        mGameLogic.getHeaderRow().startTimer();
+    }
+
+    @Override
+    protected void onDestroy()
+    {
+        super.onDestroy();
+        mGameLogic.getHeaderRow().stopTimer();
     }
 
     private void createLayout()
