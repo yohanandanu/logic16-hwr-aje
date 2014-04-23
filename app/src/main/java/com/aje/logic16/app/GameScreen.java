@@ -2,46 +2,19 @@ package com.aje.logic16.app;
 
 import com.aje.logic16.app.GameLogic.Conjunction;
 import com.aje.logic16.app.GameLogic.GameLogic;
-import com.aje.logic16.app.HighScoreLogic.highScore;
-import com.aje.logic16.app.serverApi.api;
 import com.aje.logic16.app.util.SystemUiHider;
-import com.aje.logic16.app.R;
+
 import android.annotation.TargetApi;
-import android.app.ActionBar;
 import android.app.Activity;
-import android.content.Context;
-import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.ColorFilter;
-import android.graphics.LightingColorFilter;
-import android.graphics.PixelFormat;
-import android.graphics.PorterDuff;
-import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.CountDownTimer;
 import android.os.Handler;
 import android.util.DisplayMetrics;
-import android.view.ContextThemeWrapper;
 import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.ViewGroup;
-import android.view.ViewParent;
 import android.view.Window;
-import android.view.WindowManager;
-import android.view.animation.Animation;
-import android.view.animation.RotateAnimation;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.ProgressBar;
-import android.widget.TextView;
-
-import java.util.ArrayList;
 
 
 /**
@@ -112,8 +85,10 @@ public class GameScreen extends Activity {
         //llVertical.setWeightSum(6f);
         llVertical.setLayoutParams(LLVParams);
 
+        llVertical.addView(mGameLogic.getHeaderRow());
+
         // Alle Konjunktionen holen und zur View hinzufügen
-        Conjunction[] conjunctions = mGameLogic.getConjunction();
+        Conjunction[] conjunctions = mGameLogic.getConjunctions();
         for (Conjunction conjunction : conjunctions) {
             llVertical.addView(conjunction);
         }

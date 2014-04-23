@@ -27,6 +27,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 
+import com.aje.logic16.app.GameLogic.GameScore;
 import com.aje.logic16.app.HighScoreLogic.highScore;
 import com.aje.logic16.app.serverApi.api;
 
@@ -46,8 +47,9 @@ public class WonGameActivity extends Activity {
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 
         setContentView(R.layout.won_screen);
-        TextView score = (TextView) findViewById(R.id.actualScore);
-        score.setText("3000");
+        TextView scoreText = (TextView) findViewById(R.id.actualScore);
+        int score = GameScore.getInstance().getScore();
+        scoreText.setText(new Integer(score).toString());
         EditText personName = (EditText)findViewById(R.id.namePerson);
         final Button addHighscore = (Button) findViewById(R.id.addHighscoreButton);
 
@@ -73,10 +75,9 @@ public class WonGameActivity extends Activity {
         if (insertedName.length() > 0)
         {
             TextView score = (TextView) findViewById(R.id.actualScore);
-            Integer intScore = Integer.parseInt(score.getText().toString());
 
             api myApi = new api();
-            myApi.addScore(new highScore(insertedName,intScore));
+            myApi.addScore(new highScore(insertedName, GameScore.getInstance().getScore()));
         }
 
         Intent intent = new Intent(this,StartPage.class);
