@@ -19,6 +19,8 @@ public class LiteralButton extends Literal implements View.OnClickListener
 
     private int mColumn;
 
+    private GameLogic mClickReceiver;
+
     /**
      * Constructor
      * @param context
@@ -31,11 +33,13 @@ public class LiteralButton extends Literal implements View.OnClickListener
     public LiteralButton(ContextThemeWrapper context,
                          LinearLayout.LayoutParams imageLayoutParams,
                          E_LITERAL_VALUE value,
-                         int width, int height, int column)
+                         int width, int height, int column, GameLogic clickReceiver)
     {
         super(context, imageLayoutParams, value, width, height);
 
         mColumn = column;
+
+        mClickReceiver = clickReceiver;
 
         // Komponente soll klickbar sein
         this.setClickable(true);
@@ -51,7 +55,7 @@ public class LiteralButton extends Literal implements View.OnClickListener
     public void onClick(View arg0)
     {
         swapLiteral();
-        GameLogic.getInstance().buttonClicked(mColumn);
+        mClickReceiver.buttonClicked(mColumn);
     }
 
     private void init(){

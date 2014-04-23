@@ -8,11 +8,11 @@ import android.util.DisplayMetrics;
  */
 public class GameLogic
 {
-    private static GameLogic msInstance = new GameLogic();
+    /*private static GameLogic msInstance = new GameLogic();
     public static GameLogic getInstance()
     {
         return msInstance;
-    }
+    }*/
 
     public static final int NUM_CONJUNCTIONS = 16;
     public static final int NUM_LITERALS = 8;
@@ -22,9 +22,9 @@ public class GameLogic
     private ButtonRow mButtonRow = null;
 
     /**
-     * Singleton Constructor
+     * Constructor
      */
-    private GameLogic()
+    public GameLogic()
     {}
 
     public Conjunction[] getConjunction(Context widget, DisplayMetrics metrics)
@@ -45,7 +45,7 @@ public class GameLogic
     {
         if (mButtonRow == null)
         {
-            mButtonRow = new ButtonRow(widget, metrics);
+            mButtonRow = new ButtonRow(widget, metrics, this);
         }
         return mButtonRow;
     }

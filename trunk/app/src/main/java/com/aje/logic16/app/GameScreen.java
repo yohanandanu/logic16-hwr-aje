@@ -81,6 +81,8 @@ public class GameScreen extends Activity {
 
     private DisplayMetrics mMetrics = new DisplayMetrics();
 
+    private GameLogic mGameLogic = new GameLogic();
+
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -107,12 +109,12 @@ public class GameScreen extends Activity {
         llVertical.setLayoutParams(LLVParams);
 
         // Alle Konjunktionen holen und zur View hinzufügen
-        Conjunction[] conjunctions = GameLogic.getInstance().getConjunction(this, mMetrics);
+        Conjunction[] conjunctions = mGameLogic.getConjunction(this, mMetrics);
         for (Conjunction conjunction : conjunctions) {
             llVertical.addView(conjunction);
         }
 
-        llVertical.addView(GameLogic.getInstance().getButtonRow(this, mMetrics));
+        llVertical.addView(mGameLogic.getButtonRow(this, mMetrics));
         addContentView(llVertical,LLVParams);
     }
 
