@@ -4,6 +4,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.app.Activity;
 import android.util.DisplayMetrics;
+import android.view.Gravity;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.aje.logic16.app.GameOverActivity;
@@ -49,6 +51,8 @@ public class GameLogic
         createConjunctions(widget, metrics);
         mButtonRow = new ButtonRow(widget, metrics, this);
         mHeaderRow = new HeaderRow(widget, metrics, this);
+        mHeaderRow.setGravity(Gravity.RIGHT);
+        mHeaderRow.setMinimumWidth((int) ((int)metrics.widthPixels*0.8));
     }
 
     public Conjunction[] getConjunctions()
@@ -140,6 +144,8 @@ public class GameLogic
     public void onTimeOver()
     {
         mbLost = true;
+        GameScore.getInstance().resetScore();
+        mHeaderRow.stopTimer();
         Intent intent = new Intent(mWidget, GameOverActivity.class);
         mWidget.startActivity(intent);
     }

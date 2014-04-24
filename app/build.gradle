@@ -24,6 +24,8 @@ android {
     productFlavors {
         flavor1 {
         }
+        finish {
+        }
     }
 }
 

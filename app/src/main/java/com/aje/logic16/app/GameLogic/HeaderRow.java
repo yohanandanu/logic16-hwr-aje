@@ -2,6 +2,7 @@ package com.aje.logic16.app.GameLogic;
 
 import android.content.Context;
 import android.util.DisplayMetrics;
+import android.view.Gravity;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -30,8 +31,10 @@ public class HeaderRow extends Row
         //mScoreText.setTextSize(30);
         int textSize = metrics.heightPixels / (GameLogic.NUM_CONJUNCTIONS + 1 + 5) /2 ; // 16 imageRows, + change Button (1) + some place (5)
         mScoreText.setTextSize(textSize);
-
-        this.addView(mScoreText);
+        LinearLayout.LayoutParams CScoreParams = new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
+        mScoreText.setGravity(Gravity.CENTER_HORIZONTAL|Gravity.LEFT);
+        mScoreText.setMinimumWidth((int) (metrics.widthPixels * 0.6));
+        this.addView(mScoreText,CScoreParams);
 
         mCountDown = new TimerTextView(widget, gameLogic);
         LinearLayout.LayoutParams CCTParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);

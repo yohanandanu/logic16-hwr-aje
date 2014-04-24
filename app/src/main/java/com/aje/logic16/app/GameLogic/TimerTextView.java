@@ -30,7 +30,7 @@ public class TimerTextView extends TextView
 
 
         int total=100;
-        final int thirtySeconds= 1 * 30 * 1000;
+        final int thirtySeconds= 1 * 32 * 1000;
 
 
         LayoutInflater inflater = (LayoutInflater) widget.getSystemService( Context.LAYOUT_INFLATER_SERVICE );
