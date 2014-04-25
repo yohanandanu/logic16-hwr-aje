@@ -1,8 +1,10 @@
 package com.aje.logic16.app.serverApi;
 
 import android.accounts.NetworkErrorException;
+import android.app.AlertDialog;
 import android.os.AsyncTask;
 
+import com.aje.logic16.app.GameLogic.GameLogic;
 import com.aje.logic16.app.HighScoreLogic.HighscoreListAdapter;
 import com.aje.logic16.app.HighScoreLogic.highScore;
 
@@ -113,26 +115,26 @@ public class api {
         //return "";
     }
 
-    public highScore getHighScore(int pos) throws IllegalArgumentException
+    public highScore getHighScore(int pos)
     {
         String name = "";
         int score = 0;
 
         String response = this.getScore(pos);
-        if (response.charAt(0) == '#')
+        if (response.length() > 0 && response.charAt(0) == '#')
         {
             response = response.substring(1);
 
             String[] responseSplit = response.split("#");
 
-            if (responseSplit[0].length() < 0 || responseSplit[1].length() <= 0)
-                throw new IllegalArgumentException();
+            if (responseSplit.length == 0 ||responseSplit[0].length() < 0 || responseSplit[1].length() <= 0)
+                return null;
 
             name = responseSplit[0];
             score = Integer.parseInt(responseSplit[1]);
             return new highScore(name,score);
         }
-        else throw new IllegalArgumentException();
+        else return null;
     }
 
     public void addScore(highScore score)

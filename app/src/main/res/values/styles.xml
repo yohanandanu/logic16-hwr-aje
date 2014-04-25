@@ -31,8 +31,8 @@
     </style>
 
     <style name="rectangleImageView">
-        <item name="android:padding">2dp</item>
-        <item name="android:layout_margin">2dp</item>
+        <item name="android:padding">1dp</item>
+        <item name="android:layout_margin">1dp</item>
     </style>
 
     <style name="roundImageView">
