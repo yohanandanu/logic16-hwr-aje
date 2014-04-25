@@ -30,9 +30,9 @@ public class HeaderRow extends Row
         mScoreText = new TextView(widget);
         mScoreText.setText("Score: " + GameScore.getInstance().getScore());
 
-        int textSize = metrics.heightPixels / (GameLogic.NUM_CONJUNCTIONS + 1 + 10); // 16 imageRows, + change Button (1) + some place (5)
+        int textSize = metrics.heightPixels / (GameLogic.NUM_CONJUNCTIONS + 1 + 20); // 16 imageRows, + change Button (1) + some place (5)
         //mScoreText.setTextSize(R.dimen.score_text_size);
-        mScoreText.setTextSize(textSize);
+        mScoreText.setTextSize(16 * metrics.density);
         LinearLayout.LayoutParams CScoreParams = new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
         mScoreText.setGravity(Gravity.CENTER_HORIZONTAL|Gravity.LEFT);
         mScoreText.setMinimumWidth((int) (metrics.widthPixels * 0.6));
