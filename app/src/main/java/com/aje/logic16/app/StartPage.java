@@ -5,12 +5,15 @@ import com.aje.logic16.app.util.SystemUiHider;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -179,6 +182,36 @@ public class StartPage extends Activity {
     public void show_highscore(View view) {
         Intent intent = new Intent(this, HighScoreActivity.class);
         startActivity(intent);
+    }
+
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event)
+    {
+        if (keyCode == KeyEvent.KEYCODE_BACK)
+        {
+            DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    switch (which){
+                        case DialogInterface.BUTTON_POSITIVE:
+                            Intent i = new Intent(Intent.ACTION_MAIN);
+                            i.addCategory(Intent.CATEGORY_HOME);
+                            startActivity(i);
+                            break;
+
+                        case DialogInterface.BUTTON_NEGATIVE:
+
+                            break;
+                    }
+                }
+            };
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setMessage("You want to close the app?").setPositiveButton("Yes", dialogClickListener)
+                    .setNegativeButton("No", dialogClickListener).show();
+            return true;
+        }
+        return super.onKeyDown(keyCode,event);
     }
 
 }
