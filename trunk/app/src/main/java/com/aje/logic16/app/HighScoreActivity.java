@@ -104,6 +104,7 @@ class HighScoreFiller implements Runnable
         for (int i=0;i<mPos;i++)
         {
             highScore high = myApi.getHighScore(i+1);
+            if (high == null) break;
             this.mAdapter.setDataFromThread(high);
         }
         mAct.loaderFinished();

@@ -64,6 +64,7 @@ public class GameScreen extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         getWindowManager().getDefaultDisplay().getMetrics(mMetrics);
 
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);

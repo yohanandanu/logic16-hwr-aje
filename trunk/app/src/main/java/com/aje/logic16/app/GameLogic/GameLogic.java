@@ -1,6 +1,8 @@
 package com.aje.logic16.app.GameLogic;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.app.Activity;
 import android.util.DisplayMetrics;
@@ -10,6 +12,7 @@ import android.widget.TextView;
 
 import com.aje.logic16.app.GameOverActivity;
 import com.aje.logic16.app.GameScreen;
+import com.aje.logic16.app.StartPage;
 import com.aje.logic16.app.WonGameActivity;
 import com.aje.logic16.app.serverApi.api;
 
@@ -27,6 +30,7 @@ public class GameLogic
     public static final int NUM_CONJUNCTIONS = 16;
     public static final int NUM_LITERALS = 8;
     public static final int NUM_RESULT_COLUMN = 1;
+    public static final int NUM_SOME_PLACE = 7;
 
     private Conjunction[] mConjunctions = null;
     private ButtonRow mButtonRow = null;
@@ -84,6 +88,20 @@ public class GameLogic
     {
         api gameLoader = new api();
         String formulaString = gameLoader.getFormula();
+        if (formulaString.length() <= 0)
+        {
+            new AlertDialog.Builder(mWidget)
+                    .setMessage("No Internet Connection, or Server not Available")
+                    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            onTimeOver();
+                            Intent intent = new Intent(mWidget,StartPage.class);
+                            mWidget.startActivity(intent);
+                        }
+                    })
+                    .show();
+            return;
+        }
         FormulaParser parser = new FormulaParser();
         parser.parseFormula(formulaString, mConjunctions);
 

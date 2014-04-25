@@ -28,7 +28,7 @@ public class ButtonRow extends Row
     private void createButtons(DisplayMetrics metrics, GameLogic buttonClickReceiver)
     {
         int imageWidth = metrics.widthPixels / (GameLogic.NUM_LITERALS + GameLogic.NUM_RESULT_COLUMN + 2); // 8 images + 1 result image + some place (2)
-        int imageHeight = metrics.heightPixels / (GameLogic.NUM_CONJUNCTIONS + 1 + 5); // 16 imageRows, + change Button (1) + some place (5)
+        int imageHeight = metrics.heightPixels / (GameLogic.NUM_CONJUNCTIONS + 1 + GameLogic.NUM_SOME_PLACE); // 16 imageRows, + change Button (1) + some place (5)
 
         ContextThemeWrapper rectangleImageViewContext = new ContextThemeWrapper(getContext(), R.style.rectangleImageView);
 
