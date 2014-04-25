@@ -6,6 +6,8 @@ import android.view.Gravity;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.aje.logic16.app.R;
+
 /**
  * Created by Arne on 24.04.14.
  */
@@ -28,8 +30,8 @@ public class HeaderRow extends Row
         mScoreText = new TextView(widget);
         mScoreText.setText("Score: " + GameScore.getInstance().getScore());
 
-        //mScoreText.setTextSize(30);
-        int textSize = metrics.heightPixels / (GameLogic.NUM_CONJUNCTIONS + 1 + 5) /2 ; // 16 imageRows, + change Button (1) + some place (5)
+        int textSize = metrics.heightPixels / (GameLogic.NUM_CONJUNCTIONS + 1 + 10); // 16 imageRows, + change Button (1) + some place (5)
+        //mScoreText.setTextSize(R.dimen.score_text_size);
         mScoreText.setTextSize(textSize);
         LinearLayout.LayoutParams CScoreParams = new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
         mScoreText.setGravity(Gravity.CENTER_HORIZONTAL|Gravity.LEFT);
