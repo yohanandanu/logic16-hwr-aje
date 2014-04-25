@@ -38,13 +38,24 @@ public class HeaderRow extends Row
         mScoreText.setMinimumWidth((int) (metrics.widthPixels * 0.6));
         this.addView(mScoreText,CScoreParams);
 
-        mCountDown = new TimerTextView(widget, gameLogic);
+
+        mCountDown = new TimerTextView(widget, gameLogic,GameLogic.NUM_SECONDS);
         LinearLayout.LayoutParams CCTParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
         this.addView(mCountDown.getCountDownElement(), CCTParams);
     } 
     public void startTimer()
     {
         mCountDown.startTimer();
+    }
+
+    public void resumeTimer()
+    {
+        mCountDown.resumeTimer();
+    }
+
+    public void pauseTimer()
+    {
+        mCountDown.pauseTimer();
     }
 
     public void stopTimer()

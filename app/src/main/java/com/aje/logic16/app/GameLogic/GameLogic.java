@@ -31,6 +31,7 @@ public class GameLogic
     public static final int NUM_LITERALS = 8;
     public static final int NUM_RESULT_COLUMN = 1;
     public static final int NUM_SOME_PLACE = 7;
+    public static final int NUM_SECONDS = 60;
 
     private Conjunction[] mConjunctions = null;
     private ButtonRow mButtonRow = null;

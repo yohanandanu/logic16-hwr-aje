@@ -22,22 +22,26 @@ public class TimerTextView extends TextView
     private CountDownTimer mCountDownTimer;
     private final ProgressBar mPB;
     private final Animation mAnimation;
+    private final TextView mpbText;
+    private long leftSeconds;
+    private final int thirtySeconds;
 
-    public TimerTextView(Context widget, GameLogic gameLogic)
+    public TimerTextView(Context widget, GameLogic gameLogic, int seconds)
     {
         super(widget);
+        leftSeconds = seconds * 1000;
         mGameLogic = gameLogic;
 
 
         int total=100;
-        final int thirtySeconds= 1 * 32 * 1000;
+        thirtySeconds = 1 * seconds * 1000;
 
 
         LayoutInflater inflater = (LayoutInflater) widget.getSystemService( Context.LAYOUT_INFLATER_SERVICE );
         mCountDownElement = (ViewGroup) inflater.inflate(R.layout.count_down, null);
         mPB = (ProgressBar) mCountDownElement.findViewById(R.id.progressBar);
-        final TextView pbText = (TextView) mCountDownElement.findViewById(R.id.seconds);
-        pbText.setText(Integer.toString(Math.round((thirtySeconds / 1000))));
+        mpbText = (TextView) mCountDownElement.findViewById(R.id.seconds);
+        mpbText.setText(Integer.toString(Math.round((thirtySeconds / 1000))));
 
         mPB.setProgress(total);
         mPB.setMax(total);
@@ -45,24 +49,7 @@ public class TimerTextView extends TextView
         mAnimation.setFillAfter(true);
 
 
-        mCountDownTimer = new CountDownTimer(thirtySeconds, 1000)
-        {
-            @Override
-            public void onTick(long millisUntilFinished) {
-                double un = ((double)millisUntilFinished/ (double)thirtySeconds);
-                int total = (int) Math.round(un * 100);
-                mPB.setProgress(total);
-                pbText.setText(Integer.toString(Math.round(millisUntilFinished/1000)));
-            }
-
-            @Override
-            public void onFinish() {
-                //Do what you want
-                mPB.setProgress(0);
-                pbText.setText("0");
-                mGameLogic.onTimeOver();
-            }
-        };
+        mCountDownTimer = generateCountdownTimer(thirtySeconds);
     }
 
     public ViewGroup getCountDownElement()
@@ -79,5 +66,39 @@ public class TimerTextView extends TextView
     public void stopTimer()
     {
         mCountDownTimer.cancel();
+    }
+
+    public void pauseTimer()
+    {
+        mCountDownTimer.cancel();
+    }
+
+    public void resumeTimer()
+    {
+        mCountDownTimer = generateCountdownTimer((int)leftSeconds);
+        startTimer();
+    }
+
+    private CountDownTimer generateCountdownTimer(final int seconds)
+    {
+        return new CountDownTimer(seconds, 1000)
+        {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                leftSeconds = millisUntilFinished;
+                double un = ((double)millisUntilFinished/ (double)thirtySeconds);
+                int total = (int) Math.round(un * 100);
+                mPB.setProgress(total);
+                mpbText.setText(Integer.toString(Math.round(millisUntilFinished/1000)));
+            }
+
+            @Override
+            public void onFinish() {
+                //Do what you want
+                mPB.setProgress(0);
+                mpbText.setText("0");
+                mGameLogic.onTimeOver();
+            }
+        };
     }
 }

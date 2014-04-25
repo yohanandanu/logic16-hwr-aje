@@ -352,14 +352,15 @@ public class GameScreen extends Activity {
     protected void onResume()
     {
         super.onResume();
-        mGameLogic.getHeaderRow().startTimer();
+        mGameLogic.getHeaderRow().resumeTimer();
     }
 
     @Override
     protected void onPause()
     {
         super.onPause();
-        mGameLogic.getHeaderRow().stopTimer();
+        mGameLogic.getHeaderRow().pauseTimer();
+
     }
 
 
